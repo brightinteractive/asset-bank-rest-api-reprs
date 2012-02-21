@@ -21,6 +21,21 @@
     <scm>
          <connection>scm:git:ssh://git@github.com/brightinteractive/asset-bank-rest-api-reprs.git</connection>
     </scm>
+    
+    <!--  needs to be built to java 1.5 because it is used by Asset Bank (which is currently built to 1.5) -->
+    <build>
+       <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 	<dependencies>
 		<dependency>
