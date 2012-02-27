@@ -53,6 +53,7 @@ public class RootRepr {
 		public URL accessLevelSearchUrl;
 		public URL signingUrl;
 		public URL assetSearchUrl;
+		public URL publishingActionsUrl;
 	}
 	
 	public String api_name;
@@ -79,7 +80,8 @@ public class RootRepr {
 					URL a_categorySearchUrl,
 					URL a_accessLevelSearchUrl,
 					URL a_signingUrl,
-					URL a_assetSearchUrl) 
+					URL a_assetSearchUrl,
+					URL a_publishingActionsUrl)
 	{
 		api_name = API_NAME;
 		
@@ -104,5 +106,7 @@ public class RootRepr {
 		api_version_1_2.accessLevelSearchUrl = a_accessLevelSearchUrl;
 		api_version_1_2.signingUrl = a_signingUrl;
 		api_version_1_2.assetSearchUrl = a_assetSearchUrl;
+		api_version_1_2.publishingActionsUrl = a_publishingActionsUrl;
+
 	}
 }
