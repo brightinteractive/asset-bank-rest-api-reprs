@@ -4,9 +4,7 @@ package com.brightinteractive.assetbank.restapi.representations;
  * Copyright 2012 Bright Interactive, All Rights Reserved.
  */
 
-import static org.junit.Assert.*;
-
-import javax.xml.bind.annotation.XmlRootElement;
+import static com.brightinteractive.assetbank.restapi.representations.ReprTestUtil.*;
 
 import org.junit.Test;
 
@@ -25,7 +23,6 @@ public class PublishActionReprTest
 	@Test
 	public void testPublishActionReprXmlRootElement()
 	{
-		String xmlRootElementName = PublishActionRepr.class.getAnnotation(XmlRootElement.class).name();
-		assertEquals("publishAction", xmlRootElementName);
+		assertXmlRootElementNameEquals("publishAction", PublishActionRepr.class);
 	}
 }
