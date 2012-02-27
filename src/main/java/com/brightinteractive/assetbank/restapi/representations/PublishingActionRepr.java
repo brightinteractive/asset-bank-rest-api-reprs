@@ -9,7 +9,7 @@ import java.net.URL;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * XML/JSON-serializable publish action model.
+ * XML/JSON-serializable publishing action model.
  *
  * @author Bright Interactive
  */

@@ -7,7 +7,7 @@ package com.brightinteractive.assetbank.restapi.representations;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * <p></p>Serializable publish action ID model.</p>
+ * <p></p>Serializable publishing action ID model.</p>
  *
  * <p>E.g.</p>
  * <pre>
