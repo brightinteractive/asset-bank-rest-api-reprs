@@ -5,6 +5,7 @@ package com.brightinteractive.assetbank.restapi.representations;
  */
 
 import static com.brightinteractive.assetbank.restapi.representations.ReprTestUtil.*;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -18,6 +19,19 @@ public class PublishActionIdReprTest
 	{
 		PublishActionIdRepr publishActionIdRepr = new PublishActionIdRepr();
 		publishActionIdRepr.publishActionId = 1234L;
+	}
+
+	@Test
+	public void testPublishActionIdReprHasNoArgCtor()
+	{
+		new PublishActionIdRepr();
+	}
+
+	@Test
+	public void testPublishActionIdReprHasIdCtor()
+	{
+		PublishActionIdRepr publishActionIdRepr = new PublishActionIdRepr(98765L);
+		assertEquals(98765L, publishActionIdRepr.publishActionId);
 	}
 
 	@Test

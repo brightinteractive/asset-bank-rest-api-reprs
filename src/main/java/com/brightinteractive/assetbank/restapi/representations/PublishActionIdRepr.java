@@ -22,4 +22,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class PublishActionIdRepr
 {
 	public long publishActionId;
+
+	public PublishActionIdRepr()
+	{
+	}
+
+	public PublishActionIdRepr(long a_publishActionId)
+	{
+		publishActionId = a_publishActionId;
+	}
 }
