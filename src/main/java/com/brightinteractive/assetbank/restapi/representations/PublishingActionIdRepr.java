@@ -12,23 +12,23 @@ import javax.xml.bind.annotation.XmlRootElement;
  * <p>E.g.</p>
  * <pre>
  * {
- *     "publishActionId": 123
+ *     "publishingActionId": 123
  * }
  * </pre>
  *
  * @author Bright Interactive
  */
-@XmlRootElement(name="publishActionId")
-public class PublishActionIdRepr
+@XmlRootElement(name="publishingActionId")
+public class PublishingActionIdRepr
 {
-	public long publishActionId;
+	public long publishingActionId;
 
-	public PublishActionIdRepr()
+	public PublishingActionIdRepr()
 	{
 	}
 
-	public PublishActionIdRepr(long a_publishActionId)
+	public PublishingActionIdRepr(long a_publishingActionId)
 	{
-		publishActionId = a_publishActionId;
+		publishingActionId = a_publishingActionId;
 	}
 }

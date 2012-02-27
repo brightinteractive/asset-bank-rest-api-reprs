@@ -11,8 +11,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright Interactive
  */
-@XmlRootElement(name="publishAction")
-public class PublishActionRepr
+@XmlRootElement(name="publishingAction")
+public class PublishingActionRepr
 {
 	public String logUrl;
 }
