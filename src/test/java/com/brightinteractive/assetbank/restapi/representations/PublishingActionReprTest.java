@@ -6,6 +6,9 @@ package com.brightinteractive.assetbank.restapi.representations;
 
 import static com.brightinteractive.assetbank.restapi.representations.ReprTestUtil.*;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.junit.Test;
 
 /**
@@ -14,10 +17,10 @@ import org.junit.Test;
 public class PublishingActionReprTest
 {
 	@Test
-	public void testPublishingActionReprHasLogUrl()
+	public void testPublishingActionReprHasLogUrl() throws MalformedURLException
 	{
 		PublishingActionRepr publishingActionRepr = new PublishingActionRepr();
-		publishingActionRepr.logUrl = "https://assetbank.acme.com/rest/publishing-actions/1/log";
+		publishingActionRepr.logUrl = new URL("https://assetbank.acme.com/rest/publishing-actions/1/log");
 	}
 
 	@Test
