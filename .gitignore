@@ -1,4 +1,14 @@
+# Maven output files
 /target
-/.idea/workspace.xml
 
+# IntelliJ user-specific files (the rest of .idea should be OK to check in
+# because it's not user specific)
+/.idea/workspace.xml
 *.iws
+
+# Ignore all Eclipse files for the time being because I don't want to check
+# mine in. If you want to check in an Eclipse project feel free to modify
+# this (but please try not to check in anything user-specific).
+.classpath
+.project
+.settings
