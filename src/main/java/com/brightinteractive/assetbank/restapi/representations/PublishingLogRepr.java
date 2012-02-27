@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "publishingLog")
 public class PublishingLogRepr
 {
-	@SuppressWarnings("UnusedDeclaration")
+	@SuppressWarnings("unused")
 	public PublishingLogRepr()
 	{
 	}

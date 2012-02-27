@@ -14,12 +14,12 @@ public class PublishingEventRepr
 	public long assetId;
 	public PublishingEventType type;
 
-	@SuppressWarnings("UnusedDeclaration")
+	@SuppressWarnings("unused")
 	public PublishingEventRepr()
 	{
 	}
 
-	@SuppressWarnings("UnusedDeclaration")
+	@SuppressWarnings("unused")
 	public PublishingEventRepr(long a_assetId, PublishingEventType a_type)
 	{
 		assetId = a_assetId;

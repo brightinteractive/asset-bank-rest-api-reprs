@@ -25,7 +25,7 @@ public class AssetRepr
 	@XmlElement(name = "attribute")
 	public List<AttributeValueRepr> attributes;
 
-    @SuppressWarnings("UnusedDeclaration") // needed to keep JAXB happy
+    @SuppressWarnings("unused") // needed to keep JAXB happy
 	public AssetRepr() throws MalformedURLException
     {
     	attributes = new ArrayList<AttributeValueRepr>();
