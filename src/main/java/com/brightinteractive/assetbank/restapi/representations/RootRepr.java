@@ -64,9 +64,6 @@ public class RootRepr {
     // just to make JAXB happy
     public RootRepr()
     {
-        api_name = null;
-        api_version_1_1 = null;
-        api_version_1_2 = null;
     }
 
     public RootRepr(URL a_checkoutUrl,
