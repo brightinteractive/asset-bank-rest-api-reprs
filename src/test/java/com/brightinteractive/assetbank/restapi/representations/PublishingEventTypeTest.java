@@ -16,7 +16,7 @@ public class PublishingEventTypeTest
 	@Test
 	public void testToString()
 	{
-		assertEquals("publish", PublishingEventType.publish.toString());
-		assertEquals("unpublish", PublishingEventType.unpublish.toString());
+		assertEquals("PUBLISH", PublishingEventType.PUBLISH.toString());
+		assertEquals("UNPUBLISH", PublishingEventType.UNPUBLISH.toString());
 	}
 }

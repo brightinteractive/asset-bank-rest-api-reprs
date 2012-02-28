@@ -11,6 +11,6 @@ package com.brightinteractive.assetbank.restapi.representations;
  */
 public enum PublishingEventType
 {
-	publish,
-	unpublish
+	PUBLISH,
+	UNPUBLISH
 }
