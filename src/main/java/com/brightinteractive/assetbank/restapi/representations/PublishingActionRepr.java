@@ -16,5 +16,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="publishingAction")
 public class PublishingActionRepr
 {
+	public String name;
 	public URL logUrl;
 }

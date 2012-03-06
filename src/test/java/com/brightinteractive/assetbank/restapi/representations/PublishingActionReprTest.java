@@ -17,6 +17,13 @@ import org.junit.Test;
 public class PublishingActionReprTest
 {
 	@Test
+	public void testPublishingActionReprHasName()
+	{
+		PublishingActionRepr publishingActionRepr = new PublishingActionRepr();
+		publishingActionRepr.name = "Product images";
+	}
+
+	@Test
 	public void testPublishingActionReprHasLogUrl() throws MalformedURLException
 	{
 		PublishingActionRepr publishingActionRepr = new PublishingActionRepr();
