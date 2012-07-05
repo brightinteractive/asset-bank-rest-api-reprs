@@ -16,7 +16,7 @@ public class DisplayAttributeGroupRepr
 	
 	@XmlElementWrapper
     @XmlElement(name = "attribute")
-    public List<URL> attributes;
+    public List<AttributeRepr> attributes;
 	public String name = null;
 
 	public DisplayAttributeGroupRepr() throws MalformedURLException 
@@ -25,7 +25,7 @@ public class DisplayAttributeGroupRepr
     }
 
 	public DisplayAttributeGroupRepr(URL a_url,
-					List<URL> a_attributes,
+					List<AttributeRepr> a_attributes,
 					String a_name) throws MalformedURLException 
 	{
 		url = a_url;
