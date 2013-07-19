@@ -1,9 +1,9 @@
 # Maven output files
 /target
 
-# Ignore all Eclipse files for the time being because I don't want to check
-# mine in. If you want to check in an Eclipse project feel free to modify
-# this (but please try not to check in anything user-specific).
+# Ignore all IDE files
 .classpath
 .project
 .settings
+.idea/*
+*.iml
