@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="category")
 public class CategoryWithCountRepr extends CategoryRepr
 {
-	public long count;
+	public int count;
 
 	public CategoryWithCountRepr()
     {
@@ -29,7 +29,7 @@ public class CategoryWithCountRepr extends CategoryRepr
     							 String a_name,
     							 String a_description,
     							 Collection<CategoryRepr> a_children,
-    							 long a_count)
+    							 int a_count)
 	{
     	super(a_id, a_name, a_description, a_children);
     	count = a_count;
