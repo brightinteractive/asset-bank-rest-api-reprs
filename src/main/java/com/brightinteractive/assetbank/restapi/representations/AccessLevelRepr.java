@@ -6,6 +6,7 @@ import java.util.Collections;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
 
 /**
  * Serializable access level info models.
@@ -20,6 +21,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Bright Interactive
  */
 @XmlRootElement(name="accessLevel")
+@XmlSeeAlso({AccessLevelWithCountRepr.class})
 public class AccessLevelRepr
 {
 	public long id;
