@@ -72,6 +72,7 @@ public class RootRepr {
         public URL assetSearchUrl;
         public URL publishingActionsUrl;
         public URL displayAttributeGroupUrl;
+        public URL tempChunkedFileUrl;
     }
 
     public String api_name;
@@ -99,7 +100,8 @@ public class RootRepr {
                     URL a_signingUrl,
                     URL a_assetSearchUrl,
                     URL a_publishingActionsUrl,
-                    URL a_displayAttributeGroupUrl)
+                    URL a_displayAttributeGroupUrl,
+                    URL a_tempChunkedFileUrl)
     {
         api_name = API_NAME;
 
@@ -142,5 +144,6 @@ public class RootRepr {
         api_version_1_3.assetSearchUrl = a_assetSearchUrl;
         api_version_1_3.publishingActionsUrl = a_publishingActionsUrl;
         api_version_1_3.displayAttributeGroupUrl = a_displayAttributeGroupUrl;
+        api_version_1_3.tempChunkedFileUrl = a_tempChunkedFileUrl;
     }
 }
