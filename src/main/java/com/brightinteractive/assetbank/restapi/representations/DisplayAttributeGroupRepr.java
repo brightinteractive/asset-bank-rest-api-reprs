@@ -18,6 +18,9 @@ public class DisplayAttributeGroupRepr
     @XmlElement(name = "attribute")
     public List<AttributeRepr> attributes;
 	public String name = null;
+	public long id;
+	public long displayAreaId;
+	public long entityId;
 
 	public DisplayAttributeGroupRepr() throws MalformedURLException 
     {
@@ -26,10 +29,16 @@ public class DisplayAttributeGroupRepr
 
 	public DisplayAttributeGroupRepr(URL a_url,
 					List<AttributeRepr> a_attributes,
-					String a_name) throws MalformedURLException 
+					String a_name,
+					long a_id,
+					long a_displayAreaId,
+					long a_entityId) throws MalformedURLException 
 	{
 		url = a_url;
 		attributes = a_attributes;
 		name = a_name;
+		id = a_id;
+		displayAreaId = a_displayAreaId;
+		entityId = a_entityId;
 	}
 }
