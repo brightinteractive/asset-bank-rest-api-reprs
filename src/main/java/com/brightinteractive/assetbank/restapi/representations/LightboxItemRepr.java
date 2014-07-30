@@ -20,25 +20,40 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="lightboxItem")
 public class LightboxItemRepr 
 {
+	public long id;
 	public String name;
 	public long size;
 	public URL lightboxContentsUrl;
+	public URL lightboxInstanceUrl;
 	public URL lightboxPublicUrl;
 
     // just to make JAXB happy
     public LightboxItemRepr() throws MalformedURLException 
     {
+		id = 0;
     	name = new String();
     	size = 0;
     	lightboxContentsUrl = new URL("http://example.com");
-    	lightboxPublicUrl = new URL("http://example.com");    	
-    };
+    	lightboxInstanceUrl = new URL("http://example.com");
+    	lightboxPublicUrl = new URL("http://example.com");
+    }
 
-	public LightboxItemRepr(String a_name, long a_size, URL a_lightboxContentsUrl, URL a_lightboxPublicUrl) 
+	public LightboxItemRepr(
+			long a_id,
+			String a_name,
+			long a_size,
+			URL a_lightboxInstanceUrl,
+			URL a_lightboxContentsUrl,
+			URL a_lightboxPublicUrl
+	)
 	{
+		id = a_id;
 		name = a_name;
 		size = a_size;
+		lightboxInstanceUrl = a_lightboxInstanceUrl;
 		lightboxContentsUrl = a_lightboxContentsUrl;
 		lightboxPublicUrl = a_lightboxPublicUrl;
 	}
+
+
 }
