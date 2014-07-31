@@ -18,8 +18,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class LightweightAssetRepr 
 {
 	public long id=0;
+	public String originalFilename;
 	public URL fullAssetUrl;
 	public URL thumbnailUrl;
+	
 	@XmlElementWrapper
 	@XmlElement(name = "displayAttribute")
 	public List<DisplayAttributeRepr> displayAttributes = new ArrayList<DisplayAttributeRepr>();
@@ -28,10 +30,11 @@ public class LightweightAssetRepr
     {
     }
 
-	public LightweightAssetRepr(long a_id, URL a_fullAssetUrl)
+	public LightweightAssetRepr(long a_id, URL a_fullAssetUrl, String a_originalFilename)
 	{
 		id = a_id;
 		fullAssetUrl = a_fullAssetUrl;
+		originalFilename = a_originalFilename;
 	}
 
 	public int getNumberOfDisplayAttributesWithLabel(String a_label)
