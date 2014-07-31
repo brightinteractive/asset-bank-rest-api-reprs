@@ -27,16 +27,9 @@ public class LightboxItemRepr
 	public URL lightboxInstanceUrl;
 	public URL lightboxPublicUrl;
 
-    // just to make JAXB happy
-    public LightboxItemRepr() throws MalformedURLException 
+    public LightboxItemRepr()
     {
-		id = 0;
-    	name = new String();
-    	size = 0;
-    	lightboxContentsUrl = new URL("http://example.com");
-    	lightboxInstanceUrl = new URL("http://example.com");
-    	lightboxPublicUrl = new URL("http://example.com");
-    }
+	}
 
 	public LightboxItemRepr(
 			long a_id,

@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import java.net.MalformedURLException;
+import java.net.URL;
 
 public class LightboxItemReprTest
 {
@@ -12,8 +13,8 @@ public class LightboxItemReprTest
 			throws MalformedURLException
 	{
 		LightboxItemRepr lightbox = new LightboxItemRepr();
-		assertNotNull(lightbox.lightboxContentsUrl);
-		assertNotNull(lightbox.lightboxInstanceUrl);
+		lightbox.lightboxContentsUrl = new URL("http://example.com");
+		lightbox.lightboxInstanceUrl = new URL("http://example.com");
 		assertNotSame(lightbox.lightboxContentsUrl, lightbox.lightboxInstanceUrl);
 	}
 
