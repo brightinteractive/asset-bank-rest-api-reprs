@@ -20,6 +20,8 @@ public class LightweightAssetRepr
 	public long id=0;
 	public URL fullAssetUrl;
 	public URL thumbnailUrl;
+	public URL previewUrl;
+
 	@XmlElementWrapper
 	@XmlElement(name = "displayAttribute")
 	public List<DisplayAttributeRepr> displayAttributes = new ArrayList<DisplayAttributeRepr>();
