@@ -38,4 +38,31 @@ public class AssetRepr
 		displayUrl = a_displayUrl;
 		attributes = Collections.unmodifiableList(a_attributes);
 	}
+	
+	
+	
+	public String getAttributeValue(long attributeId)
+	{
+		for (AttributeValueRepr attributeValue : attributes)
+		{
+			if (attributeValue.id == attributeId)
+			{
+				return attributeValue.value;
+			}
+		}
+		return null;
+	}
+	
+	
+	public void updateAttributeValue(long attributeId, String newAttributeValue)
+	{
+		for (AttributeValueRepr attributeValue : attributes)
+		{
+			if (attributeValue.id == attributeId)
+			{
+				attributeValue.value = newAttributeValue;
+				break;
+			}
+		}
+	}
 }
