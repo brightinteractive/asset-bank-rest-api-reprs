@@ -21,6 +21,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="createAsset")
 public class CreateAssetRequestRepr
 {
+	public boolean submit = true;
+	
 	@XmlElementWrapper
 	@XmlElement(name = "accessLevel")
 	public List<AccessLevelRepr> accessLevels;

@@ -18,6 +18,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "asset")
 public class AssetRepr
 {
+	public boolean submitted;
+	
 	public URL url;
 	public URL contentUrl;
 	public URL displayUrl;
@@ -31,11 +33,12 @@ public class AssetRepr
     	attributes = new ArrayList<AttributeValueRepr>();
     }
 
-	public AssetRepr(URL a_url, URL a_contentUrl, URL a_displayUrl, List<AttributeValueRepr> a_attributes)
+	public AssetRepr(URL url, URL contentUrl, URL displayUrl, List<AttributeValueRepr> attributes, boolean submitted)
 	{
-		url = a_url;
-		contentUrl = a_contentUrl;
-		displayUrl = a_displayUrl;
-		attributes = Collections.unmodifiableList(a_attributes);
+		this.submitted = submitted;
+		this.url = url;
+		this.contentUrl = contentUrl;
+		this.displayUrl = displayUrl;
+		this.attributes = Collections.unmodifiableList(attributes);
 	}
 }
