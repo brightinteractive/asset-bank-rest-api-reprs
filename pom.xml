@@ -10,7 +10,7 @@
 
 	<groupId>com.brightinteractive.assetbank</groupId>
 	<artifactId>asset-bank-rest-api-reprs</artifactId>
-	<version>1.9.0-SNAPSHOT</version>
+	<version>1.12.0-SNAPSHOT</version>
 
 	<name>Asset Bank REST API Representations</name>
 	<description>POJOs used to transfer data to/from Asset Bank via its REST API</description>
@@ -20,41 +20,12 @@
 		 <connection>scm:git:ssh://git@github.com/brightinteractive/asset-bank-rest-api-reprs.git</connection>
 	</scm>
 
-	<!--  needs to be built to java 1.5 because it is used by Asset Bank (which is currently built to 1.5) -->
-	<build>
-	   <plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.0.2</version>
-				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
 	<dependencies>
-		<!--
-			JAXB is included in Java 6, but not Java 5 (see
-			http://jaxb.java.net/guide/Which_JAXB_RI_is_included_in_which_JDK_.html).
-			Since this package is Java 5 compatible and can in theory be
-			built on Java 1.5, we need to depend on the JAXB API instead of
-			relying on the JDK to provide it. At runtime, users of this
-			package will need to make sure that a JAXB implementation is
-			available.
-		-->
-		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.2.6</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-core-asl</artifactId>
 			<version>1.1.2</version>
 		</dependency>
 	</dependencies>
+
 </project>
