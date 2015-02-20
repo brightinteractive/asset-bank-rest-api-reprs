@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class CreateAssetRequestRepr
 {
 	public boolean submit = true;
+	public long createAsUserId = -1;
 	
 	@XmlElementWrapper
 	@XmlElement(name = "accessLevel")
