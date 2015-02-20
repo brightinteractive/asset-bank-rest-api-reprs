@@ -17,9 +17,9 @@ public class LightboxAssetRepr extends AssetRepr
 		super();
 	}
 
-	public LightboxAssetRepr(URL a_assetInLightboxUrl, URL a_url, URL a_contentUrl, URL a_displayUrl, List<AttributeValueRepr> a_attributes)
+	public LightboxAssetRepr(URL a_assetInLightboxUrl, URL a_url, URL a_contentUrl, URL a_displayUrl, List<AttributeValueRepr> a_attributes, boolean submitted)
 	{
-		super(a_url, a_contentUrl, a_displayUrl, a_attributes);
+		super(a_url, a_contentUrl, a_displayUrl, a_attributes, submitted);
 		assetInLightboxUrl = a_assetInLightboxUrl;
 	}
 

@@ -25,7 +25,8 @@ public class LightboxAssetReprTest
 				url,
 				contentUrl,
 				displayUrl,
-				attributes
+				attributes,
+				true
 		);
 
 		assertEquals(assetInLightboxUrl, lightboxAssetRepr.assetInLightboxUrl);
