@@ -3,6 +3,8 @@ package com.brightinteractive.assetbank.restapi.representations;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -54,5 +56,13 @@ public class LightweightAssetReprTest
 	public void testGetFirstDisplayAttributeValueWithLabel() throws Exception
 	{
 		assertEquals(VALUE_2_A, asset.getFirstDisplayAttributeValueWithLabel(LABEL_2));
+	}
+
+	@Test
+	public void testHasPreviewURL() throws MalformedURLException
+	{
+		URL url = new URL("http://preview.url");
+		asset.previewUrl = url;
+		assertEquals(asset.previewUrl, url);
 	}
 }
