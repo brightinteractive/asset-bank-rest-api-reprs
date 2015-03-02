@@ -46,6 +46,12 @@ public class AssetRepr
 	}
 	
 	
+	public boolean hasParentIdsSpecified()
+	{
+		return parentIds != null;
+	}
+	
+	
 	
 	public String getAttributeValue(long attributeId)
 	{
