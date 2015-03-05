@@ -21,7 +21,7 @@ public class LightboxAssetReprTest
 		URL contentUrl = new URL("http://content.url/");
 		URL displayUrl = new URL("http://display.url/");
 		List<AttributeValueRepr> attributes = new ArrayList<AttributeValueRepr>();
-		Collection<Long> parentIds = new ArrayList<Long>();
+		Collection<AssetRepr> parents = new ArrayList<AssetRepr>();
 
 		LightboxAssetRepr lightboxAssetRepr = new LightboxAssetRepr(
 				assetInLightboxUrl,
@@ -30,7 +30,7 @@ public class LightboxAssetReprTest
 				displayUrl,
 				attributes,
 				true,
-				parentIds
+				parents
 		);
 
 		assertEquals(assetInLightboxUrl, lightboxAssetRepr.assetInLightboxUrl);
