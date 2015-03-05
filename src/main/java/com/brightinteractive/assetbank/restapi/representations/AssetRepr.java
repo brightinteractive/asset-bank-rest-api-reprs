@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class AssetRepr
 {
 	public boolean submitted;
-	public Collection<AssetRepr> parents;
+	public Collection<Long> parentIds;
 	
 	public URL url;
 	public URL contentUrl;
@@ -35,20 +35,20 @@ public class AssetRepr
     	attributes = new ArrayList<AttributeValueRepr>();
     }
 
-	public AssetRepr(URL url, URL contentUrl, URL displayUrl, List<AttributeValueRepr> attributes, boolean submitted, Collection<AssetRepr> parents)
+	public AssetRepr(URL url, URL contentUrl, URL displayUrl, List<AttributeValueRepr> attributes, boolean submitted, Collection<Long> parentIds)
 	{
 		this.submitted = submitted;
 		this.url = url;
 		this.contentUrl = contentUrl;
 		this.displayUrl = displayUrl;
 		this.attributes = Collections.unmodifiableList(attributes);
-		this.parents = parents;
+		this.parentIds = parentIds;
 	}
 	
 	
-	public boolean hasParentsSpecified()
+	public boolean hasParentIdsSpecified()
 	{
-		return parents != null;
+		return parentIds != null;
 	}
 	
 	
