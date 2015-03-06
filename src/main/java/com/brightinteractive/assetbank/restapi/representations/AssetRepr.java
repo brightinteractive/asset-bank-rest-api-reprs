@@ -20,11 +20,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class AssetRepr
 {
 	public boolean submitted;
-	public Collection<Long> parentIds;
+	public Collection<URL> parents;
 	
 	public URL url;
 	public URL contentUrl;
 	public URL displayUrl;
+	
 	@XmlElementWrapper
 	@XmlElement(name = "attribute")
 	public List<AttributeValueRepr> attributes;
@@ -35,20 +36,20 @@ public class AssetRepr
     	attributes = new ArrayList<AttributeValueRepr>();
     }
 
-	public AssetRepr(URL url, URL contentUrl, URL displayUrl, List<AttributeValueRepr> attributes, boolean submitted, Collection<Long> parentIds)
+	public AssetRepr(URL url, URL contentUrl, URL displayUrl, List<AttributeValueRepr> attributes, boolean submitted, Collection<URL> parents)
 	{
 		this.submitted = submitted;
 		this.url = url;
 		this.contentUrl = contentUrl;
 		this.displayUrl = displayUrl;
 		this.attributes = Collections.unmodifiableList(attributes);
-		this.parentIds = parentIds;
+		this.parents = parents;
 	}
 	
 	
-	public boolean hasParentIdsSpecified()
+	public boolean hasParentsSpecified()
 	{
-		return parentIds != null;
+		return parents != null;
 	}
 	
 	
