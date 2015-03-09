@@ -20,7 +20,7 @@ public class AssetEntityRepr
 	
 	public List<AssetEntityAttributeRepr> allowableAttributes;
 	public boolean showAttributeLabels;
-	public URL matchOnAttribute;
+	public URL matchOnAttributeUrl;
 	
 	public boolean allowChildren;
 	public List<AssetEntityRelationshipRepr> childRelationships;
