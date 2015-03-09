@@ -4,7 +4,7 @@ package com.brightinteractive.assetbank.restapi.representations;
 import java.net.URL;
 import java.util.List;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "asset-type")
 public class AssetEntityRepr
@@ -14,20 +14,26 @@ public class AssetEntityRepr
 	public String name;
 	public String thumbnailFilename;
 
-	public List<Long> allowableMediaTypes;
+	public List<String> allowableMediaTypes;
 	public String includedFileFormats;
 	public String excludedFileFormats;
 
+	@XmlElementWrapper
+	@XmlElement(name = "allowableAttribute")
 	public List<AssetEntityAttributeRepr> allowableAttributes;
 	public boolean showAttributeLabels;
 	public URL matchOnAttributeUrl;
 
 	public boolean allowChildren;
+	@XmlElementWrapper
+	@XmlElement(name = "childRelationships")
 	public List<AssetEntityRelationshipRepr> childRelationships;
 	public String childRelationshipToName;
 	public String childRelationshipToNamePlural;
 
 	public boolean allowPeers;
+	@XmlElementWrapper
+	@XmlElement(name = "peerRelationships")
 	public List<AssetEntityRelationshipRepr> peerRelationships;
 	public String peerRelationshipToName;
 	public String peerRelationshipToNamePlural;
