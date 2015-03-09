@@ -73,7 +73,7 @@ public class RootRepr {
         public URL publishingActionsUrl;
         public URL displayAttributeGroupUrl;
         public URL tempChunkedFilesUrl;
-		public URL assetEntitiesUrl;
+		public URL assetTypesUrl;
     }
 
     public String api_name;
@@ -103,7 +103,7 @@ public class RootRepr {
                     URL a_publishingActionsUrl,
                     URL a_displayAttributeGroupUrl,
                     URL a_tempChunkedFilesUrl,
-					URL a_assetEntitiesUrl)
+					URL a_assetTypesUrl)
     {
         api_name = API_NAME;
 
@@ -147,6 +147,6 @@ public class RootRepr {
         api_version_1_3.publishingActionsUrl = a_publishingActionsUrl;
         api_version_1_3.displayAttributeGroupUrl = a_displayAttributeGroupUrl;
         api_version_1_3.tempChunkedFilesUrl = a_tempChunkedFilesUrl;
-		api_version_1_3.assetEntitiesUrl = a_assetEntitiesUrl;
+		api_version_1_3.assetTypesUrl = a_assetTypesUrl;
     }
 }
