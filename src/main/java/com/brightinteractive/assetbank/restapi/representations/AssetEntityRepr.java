@@ -40,9 +40,9 @@ public class AssetEntityRepr
 	
 	public boolean canDownloadChildrenFromParent;
 	
-	public URL defaultCategoryUrl;
+	public long defaultCategoryId;
 	public boolean onlyAllowDefaultCategory;
-	public URL rootCategoryUrl;
+	public long rootCategoryId;
 	public boolean categoryExtension;
 	
 	public boolean showOnDescendantCategories;

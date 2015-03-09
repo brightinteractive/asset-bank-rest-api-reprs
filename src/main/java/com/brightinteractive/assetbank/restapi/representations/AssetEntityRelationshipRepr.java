@@ -8,8 +8,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="asset-type-relationship")
 public class AssetEntityRelationshipRepr
 {
-	public URL relatesToAssetTypeUrl;
-	public URL defaultRelationshipCategoryUrl;
+	public URL relatesToAssetTypeId;
+	public long defaultRelationshipCategoryId;
 	public String relationshipDescriptionLabel;
 	public boolean includeChildrenInDownload;	
 }
