@@ -15,13 +15,13 @@ public class AssetEntityRelationshipRepr
 	public AssetEntityRelationshipRepr(URL relatesToAssetTypeId, long defaultRelationshipCategoryId, String relationshipDescriptionLabel, boolean includeChildrenInDownload)
 	{
 	
-		this.relatesToAssetTypeId = relatesToAssetTypeId;
+		this.relatesToAssetTypeUrl = relatesToAssetTypeId;
 		this.defaultRelationshipCategoryId = defaultRelationshipCategoryId;
 		this.relationshipDescriptionLabel = relationshipDescriptionLabel;
 		this.includeChildrenInDownload = includeChildrenInDownload;
 	}
 
-	public URL relatesToAssetTypeId;
+	public URL relatesToAssetTypeUrl;
 	public long defaultRelationshipCategoryId;
 	public String relationshipDescriptionLabel;
 	public boolean includeChildrenInDownload;
