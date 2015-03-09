@@ -9,7 +9,7 @@ import org.junit.Test;
 public class CreateAssetRequestReprTest
 {
 	@Test
-	public void constructCreateAssetRequestReprTestSubmittDefaultsToTrue()
+	public void constructCreateAssetRequestReprTestSubmitDefaultsToTrue()
 	{
 		CreateAssetRequestRepr rep = new CreateAssetRequestRepr(new ArrayList<AccessLevelRepr>());
 		assertTrue(rep.submit);

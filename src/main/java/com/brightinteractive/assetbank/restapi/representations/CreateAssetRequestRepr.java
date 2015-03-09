@@ -4,6 +4,7 @@ package com.brightinteractive.assetbank.restapi.representations;
  * Copyright 2013 Bright Interactive, All Rights Reserved.
  */
 
+import java.net.URL;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -23,6 +24,7 @@ public class CreateAssetRequestRepr
 {
 	public boolean submit = true;
 	public long createAsUserId = -1;
+	public URL assetTypeUrl;
 	
 	@XmlElementWrapper
 	@XmlElement(name = "accessLevel")
