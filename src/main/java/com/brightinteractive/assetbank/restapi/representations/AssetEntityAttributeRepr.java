@@ -8,6 +8,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "asset-type-attribute")
 public class AssetEntityAttributeRepr
 {
+	public AssetEntityAttributeRepr()
+	{
+	}
+
 	public AssetEntityAttributeRepr(URL attributeUrl, boolean visibleOnAdd, String valueIfNotVisible)
 	{
 		this.attributeUrl = attributeUrl;

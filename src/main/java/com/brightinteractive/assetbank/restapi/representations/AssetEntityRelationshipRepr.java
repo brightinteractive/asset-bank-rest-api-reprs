@@ -8,8 +8,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "asset-type-relationship")
 public class AssetEntityRelationshipRepr
 {
+	public AssetEntityRelationshipRepr()
+	{
+	}
+
 	public AssetEntityRelationshipRepr(URL relatesToAssetTypeId, long defaultRelationshipCategoryId, String relationshipDescriptionLabel, boolean includeChildrenInDownload)
 	{
+	
 		this.relatesToAssetTypeId = relatesToAssetTypeId;
 		this.defaultRelationshipCategoryId = defaultRelationshipCategoryId;
 		this.relationshipDescriptionLabel = relationshipDescriptionLabel;
