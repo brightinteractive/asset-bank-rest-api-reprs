@@ -11,7 +11,7 @@ public class AssetEntityRepr
 {
 	public URL url;
 	public long id;
-	public long name;
+	public String name;
 	public String thumbnailFilename;
 	
 	public List<Long> allowableMediaTypes;
