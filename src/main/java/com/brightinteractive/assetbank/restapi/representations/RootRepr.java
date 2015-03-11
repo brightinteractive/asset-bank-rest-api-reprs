@@ -74,6 +74,8 @@ public class RootRepr {
         public URL displayAttributeGroupUrl;
         public URL tempChunkedFilesUrl;
 		public URL assetEntitiesUrl;
+		public URL accessLevelsUrl;
+		public URL categoriesUrl;
     }
 
     public String api_name;
@@ -87,66 +89,70 @@ public class RootRepr {
     {
     }
 
-    public RootRepr(URL a_checkoutUrl,
-                    URL a_editorDependenciesUrl,
-                    URL a_lightboxesUrl,
-                    URL a_lightboxes_v1_1_Url,
-                    URL a_assetsUrl,
-                    URL a_assets_v1_2_Url,
-                    URL a_usersUrl,
-                    URL a_userSearchUrl,
-                    URL a_attributesUrl,
-                    URL a_categorySearchUrl,
-                    URL a_accessLevelSearchUrl,
-                    URL a_signingUrl,
-                    URL a_assetSearchUrl,
-                    URL a_publishingActionsUrl,
-                    URL a_displayAttributeGroupUrl,
-                    URL a_tempChunkedFilesUrl,
-					URL a_assetEntitiesUrl)
+    public RootRepr(URL checkoutUrl,
+                    URL editorDependenciesUrl,
+                    URL lightboxesUrl,
+                    URL lightboxes_v1_1_Url,
+                    URL assetsUrl,
+                    URL assets_v1_2_Url,
+                    URL usersUrl,
+                    URL userSearchUrl,
+                    URL attributesUrl,
+                    URL categorySearchUrl,
+                    URL accessLevelSearchUrl,
+                    URL signingUrl,
+                    URL assetSearchUrl,
+                    URL publishingActionsUrl,
+                    URL displayAttributeGroupUrl,
+                    URL tempChunkedFilesUrl,
+					URL assetEntitiesUrl,
+					URL accessLevelsUrl,
+					URL categoriesUrl)
     {
         api_name = API_NAME;
 
         //build the 1.1 version...
         api_version_1_1 = new RootServices_v_1_1();
-        api_version_1_1.checkoutUrl = a_checkoutUrl;
-        api_version_1_1.editorDependenciesUrl = a_editorDependenciesUrl;
-        api_version_1_1.lightboxesUrl = a_lightboxes_v1_1_Url;
-        api_version_1_1.assetsUrl = a_assets_v1_2_Url;
-        api_version_1_1.signingUrl = a_signingUrl;
+        api_version_1_1.checkoutUrl = checkoutUrl;
+        api_version_1_1.editorDependenciesUrl = editorDependenciesUrl;
+        api_version_1_1.lightboxesUrl = lightboxes_v1_1_Url;
+        api_version_1_1.assetsUrl = assets_v1_2_Url;
+        api_version_1_1.signingUrl = signingUrl;
 
         //and now the 1.2...
         api_version_1_2 = new RootServices_v_1_2();
-        api_version_1_2.checkoutUrl = a_checkoutUrl;
-        api_version_1_2.editorDependenciesUrl = a_editorDependenciesUrl;
-        api_version_1_2.lightboxesUrl = a_lightboxesUrl;
-        api_version_1_2.assetsUrl = a_assets_v1_2_Url;
-        api_version_1_2.usersUrl = a_usersUrl;
-        api_version_1_2.userSearchUrl = a_userSearchUrl;
-        api_version_1_2.attributesUrl = a_attributesUrl;
-        api_version_1_2.categorySearchUrl = a_categorySearchUrl;
-        api_version_1_2.accessLevelSearchUrl = a_accessLevelSearchUrl;
-        api_version_1_2.signingUrl = a_signingUrl;
-        api_version_1_2.assetSearchUrl = a_assetSearchUrl;
-        api_version_1_2.publishingActionsUrl = a_publishingActionsUrl;
-        api_version_1_2.displayAttributeGroupUrl = a_displayAttributeGroupUrl;
+        api_version_1_2.checkoutUrl = checkoutUrl;
+        api_version_1_2.editorDependenciesUrl = editorDependenciesUrl;
+        api_version_1_2.lightboxesUrl = lightboxesUrl;
+        api_version_1_2.assetsUrl = assets_v1_2_Url;
+        api_version_1_2.usersUrl = usersUrl;
+        api_version_1_2.userSearchUrl = userSearchUrl;
+        api_version_1_2.attributesUrl = attributesUrl;
+        api_version_1_2.categorySearchUrl = categorySearchUrl;
+        api_version_1_2.accessLevelSearchUrl = accessLevelSearchUrl;
+        api_version_1_2.signingUrl = signingUrl;
+        api_version_1_2.assetSearchUrl = assetSearchUrl;
+        api_version_1_2.publishingActionsUrl = publishingActionsUrl;
+        api_version_1_2.displayAttributeGroupUrl = displayAttributeGroupUrl;
 
         //and now the 1.3...
         api_version_1_3 = new RootServices_v_1_3();
-        api_version_1_3.checkoutUrl = a_checkoutUrl;
-        api_version_1_3.editorDependenciesUrl = a_editorDependenciesUrl;
-        api_version_1_3.lightboxesUrl = a_lightboxesUrl;
-        api_version_1_3.assetsUrl = a_assetsUrl;
-        api_version_1_3.usersUrl = a_usersUrl;
-        api_version_1_3.userSearchUrl = a_userSearchUrl;
-        api_version_1_3.attributesUrl = a_attributesUrl;
-        api_version_1_3.categorySearchUrl = a_categorySearchUrl;
-        api_version_1_3.accessLevelSearchUrl = a_accessLevelSearchUrl;
-        api_version_1_3.signingUrl = a_signingUrl;
-        api_version_1_3.assetSearchUrl = a_assetSearchUrl;
-        api_version_1_3.publishingActionsUrl = a_publishingActionsUrl;
-        api_version_1_3.displayAttributeGroupUrl = a_displayAttributeGroupUrl;
-        api_version_1_3.tempChunkedFilesUrl = a_tempChunkedFilesUrl;
-		api_version_1_3.assetEntitiesUrl = a_assetEntitiesUrl;
+        api_version_1_3.checkoutUrl = checkoutUrl;
+        api_version_1_3.editorDependenciesUrl = editorDependenciesUrl;
+        api_version_1_3.lightboxesUrl = lightboxesUrl;
+        api_version_1_3.assetsUrl = assetsUrl;
+        api_version_1_3.usersUrl = usersUrl;
+        api_version_1_3.userSearchUrl = userSearchUrl;
+        api_version_1_3.attributesUrl = attributesUrl;
+        api_version_1_3.categorySearchUrl = categorySearchUrl;
+        api_version_1_3.accessLevelSearchUrl = accessLevelSearchUrl;
+        api_version_1_3.signingUrl = signingUrl;
+        api_version_1_3.assetSearchUrl = assetSearchUrl;
+        api_version_1_3.publishingActionsUrl = publishingActionsUrl;
+        api_version_1_3.displayAttributeGroupUrl = displayAttributeGroupUrl;
+        api_version_1_3.tempChunkedFilesUrl = tempChunkedFilesUrl;
+		api_version_1_3.assetEntitiesUrl = assetEntitiesUrl;
+		api_version_1_3.accessLevelsUrl = accessLevelsUrl;
+		api_version_1_3.categoriesUrl = categoriesUrl;
     }
 }
