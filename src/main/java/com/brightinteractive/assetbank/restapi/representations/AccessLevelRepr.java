@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @XmlSeeAlso({AccessLevelWithCountRepr.class})
 public class AccessLevelRepr
 {
+	public URL url;
 	public long id;
 	public String name;
 	public String description;
@@ -37,12 +38,14 @@ public class AccessLevelRepr
     {
     }
 
-    public AccessLevelRepr(long id,
+    public AccessLevelRepr(URL url,
+						   long id,
 						   String name,
 						   String description,
 						   Collection<AccessLevelRepr> children,
 						   URL parent)
 	{
+		this.url = url;
     	this.id = id;
     	this.name = name;
     	this.description = description;

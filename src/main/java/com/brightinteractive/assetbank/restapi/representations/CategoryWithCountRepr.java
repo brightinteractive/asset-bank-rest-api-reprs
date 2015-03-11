@@ -26,14 +26,15 @@ public class CategoryWithCountRepr extends CategoryRepr
     {
     }
 
-    public CategoryWithCountRepr(long a_id,
+    public CategoryWithCountRepr(URL url,
+								 long a_id,
     							 String a_name,
     							 String a_description,
     							 Collection<CategoryRepr> a_children,
     							 URL parent,
     							 int a_count)
 	{
-    	super(a_id, a_name, a_description, a_children, parent);
+    	super(url, a_id, a_name, a_description, a_children, parent);
     	count = a_count;
 	}
 }
