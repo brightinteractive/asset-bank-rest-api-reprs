@@ -1,5 +1,6 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
+import java.net.URL;
 import java.util.Collection;
 
 import javax.xml.bind.annotation.XmlRootElement;
@@ -29,9 +30,10 @@ public class AccessLevelWithCountRepr extends AccessLevelRepr
 						   String a_name,
 						   String a_description,
 						   Collection<AccessLevelRepr> a_children,
+						   URL parent,
 						   int a_count)
 	{
-		super(a_id, a_name, a_description, a_children);
+		super(a_id, a_name, a_description, a_children, parent);
 		this.count = a_count;
 	}
 }
