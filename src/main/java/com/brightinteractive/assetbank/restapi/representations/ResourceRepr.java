@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlValue;
 
+import org.codehaus.jackson.annotate.JsonCreator;
 import org.codehaus.jackson.annotate.JsonValue;
 
 /**
@@ -22,26 +23,33 @@ import org.codehaus.jackson.annotate.JsonValue;
 @XmlAccessorType(XmlAccessType.NONE)
 public class ResourceRepr
 {
-	private String m_resource;
+	private String resource;
 
 	public ResourceRepr()
 	{
 	}
 
-	public ResourceRepr(String a_resource)
+	public ResourceRepr(String resource)
 	{
-		m_resource = a_resource;
+		this.resource = resource;
 	}
 
-	public ResourceRepr(URL a_resourceURL)
+	public ResourceRepr(URL resourceURL)
 	{
-		this(a_resourceURL.toString());
+		this(resourceURL.toString());
 	}
 
 	@XmlValue
 	@JsonValue
 	public String getResource()
 	{
-		return m_resource;
+		return resource;
 	}
+	
+	
+	@JsonCreator
+    public void setResource(String resource)
+	{
+		this.resource = resource;
+    }
 }
