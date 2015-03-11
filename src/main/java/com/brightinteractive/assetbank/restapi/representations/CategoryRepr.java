@@ -1,5 +1,6 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
+import java.net.URL;
 import java.util.Collection;
 import java.util.Collections;
 
@@ -27,6 +28,8 @@ public class CategoryRepr
 	public long id;
 	public String name;
 	public String description;
+	public URL parent;
+	
 	@XmlElementWrapper
 	@XmlElement(name = "category")
 	public Collection<CategoryRepr> children;
@@ -35,14 +38,16 @@ public class CategoryRepr
     {
     }
 
-    public CategoryRepr(long a_id,
-    					String a_name,
-    					String a_description,
-    					Collection<CategoryRepr> a_children)
+    public CategoryRepr(long id,
+    					String name,
+    					String description,
+    					Collection<CategoryRepr> children,
+    					URL parent)
 	{
-    	id = a_id;
-    	name = a_name;
-    	description = a_description;
-    	children = Collections.unmodifiableCollection(a_children);
+    	this.id = id;
+    	this.name = name;
+    	this.description = description;
+    	this.children = Collections.unmodifiableCollection(children);
+    	this.parent = parent;
 	}
 }
