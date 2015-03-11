@@ -27,14 +27,14 @@ public class AccessLevelWithCountRepr extends AccessLevelRepr
     }
 
     public AccessLevelWithCountRepr(URL url,
-									long a_id,
-									String a_name,
-									String a_description,
-									Collection<AccessLevelRepr> a_children,
+									long id,
+									String name,
+									String description,
+									Collection<AccessLevelRepr> children,
 									URL parent,
-									int a_count)
+									int count)
 	{
-		super(url, a_id, a_name, a_description, a_children, parent);
-		this.count = a_count;
+		super(url, id, name, description, children, parent);
+		this.count = count;
 	}
 }
