@@ -49,4 +49,10 @@ public class AccessLevelRepr
     	this.children = Collections.unmodifiableCollection(children);
     	this.parent = parent;
 	}
+    
+    
+    public boolean hasParent ()
+    {
+    	return parent != null;
+    }
 }

@@ -50,4 +50,9 @@ public class CategoryRepr
     	this.children = Collections.unmodifiableCollection(children);
     	this.parent = parent;
 	}
+    
+    public boolean hasParent ()
+    {
+    	return parent != null;
+    }
 }
