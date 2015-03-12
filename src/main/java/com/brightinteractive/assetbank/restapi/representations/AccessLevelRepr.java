@@ -9,6 +9,8 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 
+import org.apache.commons.collections.CollectionUtils;
+
 /**
  * Serializable access level info models.
  * 
@@ -57,5 +59,10 @@ public class AccessLevelRepr
     public boolean hasParent ()
     {
     	return parent != null;
+    }
+    
+    public boolean hasChildren()
+    {
+    	return !CollectionUtils.isEmpty(children);
     }
 }
