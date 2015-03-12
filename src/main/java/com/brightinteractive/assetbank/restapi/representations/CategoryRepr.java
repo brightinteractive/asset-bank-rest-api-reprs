@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @XmlSeeAlso({CategoryWithCountRepr.class})
 public class CategoryRepr
 {
+	public URL url;
 	public long id;
 	public String name;
 	public String description;
@@ -38,12 +39,14 @@ public class CategoryRepr
     {
     }
 
-    public CategoryRepr(long id,
+    public CategoryRepr(URL url,
+						long id,
     					String name,
     					String description,
     					Collection<CategoryRepr> children,
     					URL parent)
 	{
+		this.url = url;
     	this.id = id;
     	this.name = name;
     	this.description = description;
