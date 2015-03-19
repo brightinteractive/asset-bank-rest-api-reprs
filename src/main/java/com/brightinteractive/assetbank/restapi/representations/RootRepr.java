@@ -76,6 +76,8 @@ public class RootRepr {
 		public URL assetTypesUrl;
 		public URL accessLevelsUrl;
 		public URL categoriesUrl;
+		public URL pendingUploadApprovalsUrl;
+		public URL pendingEditApprovalsUrl;
     }
 
     public String api_name;
@@ -107,7 +109,9 @@ public class RootRepr {
                     URL tempChunkedFilesUrl,
 					URL assetTypesUrl,
 					URL accessLevelsUrl,
-					URL categoriesUrl)
+					URL categoriesUrl,
+					URL pendingUploadApprovalsUrl,
+					URL pendingEditApprovalsUrl)
 
     {
         api_name = API_NAME;
@@ -155,5 +159,7 @@ public class RootRepr {
 		api_version_1_3.assetTypesUrl = assetTypesUrl;
 		api_version_1_3.accessLevelsUrl = accessLevelsUrl;
 		api_version_1_3.categoriesUrl = categoriesUrl;
+		api_version_1_3.pendingUploadApprovalsUrl = pendingUploadApprovalsUrl;
+		api_version_1_3.pendingEditApprovalsUrl = pendingEditApprovalsUrl;
     }
 }
