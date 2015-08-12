@@ -16,8 +16,7 @@ public class PublishedLightboxRepr
     {
 	}
 
-	public PublishedLightboxRepr(URL publishedLightboxUrl
-	)
+	public PublishedLightboxRepr(URL publishedLightboxUrl)
 	{
 		this.publishedLightboxUrl = publishedLightboxUrl;
 	}
