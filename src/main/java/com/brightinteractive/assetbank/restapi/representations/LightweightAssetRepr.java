@@ -31,29 +31,29 @@ public class LightweightAssetRepr
     {
     }
 
-	public LightweightAssetRepr(long a_id, URL a_fullAssetUrl, String a_originalFilename)
+	public LightweightAssetRepr(long id, URL fullAssetUrl, String originalFilename)
 	{
-		id = a_id;
-		fullAssetUrl = a_fullAssetUrl;
-		originalFilename = a_originalFilename;
+		this.id = id;
+		this.fullAssetUrl = fullAssetUrl;
+		this.originalFilename = originalFilename;
 	}
 
-	public int getNumberOfDisplayAttributesWithLabel(String a_label)
+	public int getNumberOfDisplayAttributesWithLabel(String label)
 	{
-		return getDisplayAttributeValuesWithLabel(a_label).size();
+		return getDisplayAttributeValuesWithLabel(label).size();
 	}
 
-	public boolean hasDisplayAttributeWithLabel(String a_label)
+	public boolean hasDisplayAttributeWithLabel(String label)
 	{
-		return getNumberOfDisplayAttributesWithLabel(a_label) > 0;
+		return getNumberOfDisplayAttributesWithLabel(label) > 0;
 	}
 
-	public List<String> getDisplayAttributeValuesWithLabel(String a_label)
+	public List<String> getDisplayAttributeValuesWithLabel(String label)
 	{
 		List<String> values = new ArrayList<String>();
 		for (DisplayAttributeRepr attribute : displayAttributes)
 		{
-			if (attribute.label.equals(a_label))
+			if (attribute.label.equals(label))
 			{
 				values.add(attribute.value);
 			}
@@ -62,9 +62,9 @@ public class LightweightAssetRepr
 		return values;
 	}
 
-	public String getFirstDisplayAttributeValueWithLabel(String a_label)
+	public String getFirstDisplayAttributeValueWithLabel(String label)
 	{
-		List<String> values = getDisplayAttributeValuesWithLabel(a_label);
+		List<String> values = getDisplayAttributeValuesWithLabel(label);
 
 		return values.isEmpty() ? null: values.get(0);
 	}
