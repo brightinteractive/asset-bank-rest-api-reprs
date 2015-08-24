@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class AssetRepr
 {
 	public boolean submitted;
+	public boolean approved;	
 	public Collection<URL> parents;
 	
 	public URL url;
@@ -36,9 +37,16 @@ public class AssetRepr
     	attributes = new ArrayList<AttributeValueRepr>();
     }
 
-	public AssetRepr(URL url, URL contentUrl, URL displayUrl, List<AttributeValueRepr> attributes, boolean submitted, Collection<URL> parents)
+	public AssetRepr(URL url, 
+					 URL contentUrl, 
+					 URL displayUrl, 
+					 List<AttributeValueRepr> attributes, 
+					 boolean submitted,
+					 boolean approved,
+					 Collection<URL> parents)
 	{
 		this.submitted = submitted;
+		this.approved = approved;
 		this.url = url;
 		this.contentUrl = contentUrl;
 		this.displayUrl = displayUrl;

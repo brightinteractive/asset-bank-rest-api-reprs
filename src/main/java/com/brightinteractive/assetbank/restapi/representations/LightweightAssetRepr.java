@@ -22,6 +22,7 @@ public class LightweightAssetRepr
 	public URL fullAssetUrl;
 	public URL thumbnailUrl;
 	public URL previewUrl;
+	public boolean approved;
 
 	@XmlElementWrapper
 	@XmlElement(name = "displayAttribute")
@@ -31,11 +32,12 @@ public class LightweightAssetRepr
     {
     }
 
-	public LightweightAssetRepr(long id, URL fullAssetUrl, String originalFilename)
+	public LightweightAssetRepr(long id, URL fullAssetUrl, String originalFilename, boolean approved)
 	{
 		this.id = id;
 		this.fullAssetUrl = fullAssetUrl;
 		this.originalFilename = originalFilename;
+		this.approved = approved;
 	}
 
 	public int getNumberOfDisplayAttributesWithLabel(String label)
