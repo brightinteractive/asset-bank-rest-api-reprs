@@ -25,6 +25,7 @@ public class UserRepr
 {
 	public URL url;
 	public URL lightboxUrl;
+	public long id;
 	public String username = null;
 	public String forename = null;
 	public String surname = null;
@@ -41,6 +42,7 @@ public class UserRepr
 
 	public UserRepr(URL a_url,
 					URL a_lightboxUrl,
+					long a_id,
 					String a_username,
 					String a_forename,
 					String a_surname,
@@ -49,6 +51,7 @@ public class UserRepr
 	{
 		url = a_url;
 		lightboxUrl = a_lightboxUrl;
+		id = a_id;
 		username = a_username;
 		forename = a_forename;
 		surname = a_surname;
