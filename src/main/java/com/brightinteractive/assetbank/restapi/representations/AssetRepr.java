@@ -25,6 +25,7 @@ public class AssetRepr
 	
 	public URL url;
 	public URL contentUrl;
+	public URL contentUrlUrl;
 	public URL displayUrl;
 	
 	@XmlElementWrapper
@@ -38,7 +39,8 @@ public class AssetRepr
     }
 
 	public AssetRepr(URL url, 
-					 URL contentUrl, 
+					 URL contentUrl,
+					 URL contentUrlUrl,
 					 URL displayUrl, 
 					 List<AttributeValueRepr> attributes, 
 					 boolean submitted,
@@ -49,6 +51,7 @@ public class AssetRepr
 		this.approved = approved;
 		this.url = url;
 		this.contentUrl = contentUrl;
+		this.contentUrlUrl = contentUrlUrl;
 		this.displayUrl = displayUrl;
 		this.attributes = Collections.unmodifiableList(attributes);
 		this.parents = parents;
