@@ -19,9 +19,18 @@ public class LightboxAssetRepr extends AssetRepr
 		super();
 	}
 
-	public LightboxAssetRepr(URL assetInLightboxUrl, URL url, URL contentUrl, URL contentUrlUrl, URL displayUrl, List<AttributeValueRepr> attributes, boolean submitted, boolean approved, Collection<URL> parents)
+	public LightboxAssetRepr(URL assetInLightboxUrl,
+							 URL url,
+							 URL contentUrl,
+							 URL contentUrlUrl,
+							 URL displayUrl,
+							 List<AttributeValueRepr> attributes,
+							 boolean submitted,
+							 boolean approved,
+							 Collection<URL> parents,
+							 String type)
 	{
-		super(url, contentUrl, contentUrlUrl, displayUrl, attributes, submitted, approved, parents);
+		super(url, contentUrl, contentUrlUrl, displayUrl, attributes, submitted, approved, parents, type);
 		this.assetInLightboxUrl = assetInLightboxUrl;
 	}
 
