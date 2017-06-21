@@ -20,7 +20,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class AssetRepr
 {
 	public boolean submitted;
-	public boolean approved;	
+	public boolean approved;
+	public String type;
 	public Collection<URL> parents;
 	
 	public URL url;
@@ -45,7 +46,8 @@ public class AssetRepr
 					 List<AttributeValueRepr> attributes, 
 					 boolean submitted,
 					 boolean approved,
-					 Collection<URL> parents)
+					 Collection<URL> parents,
+					 String type)
 	{
 		this.submitted = submitted;
 		this.approved = approved;
@@ -55,6 +57,7 @@ public class AssetRepr
 		this.displayUrl = displayUrl;
 		this.attributes = Collections.unmodifiableList(attributes);
 		this.parents = parents;
+		this.type = type;
 	}
 	
 	
