@@ -12,6 +12,8 @@ public class LightboxAssetRepr extends AssetRepr
 {
 
 	public URL assetInLightboxUrl;
+	public URL thumbnailUrl;
+	public URL previewUrl;
 
 	@SuppressWarnings("unused") // needed to keep JAXB happy
 	public LightboxAssetRepr() throws MalformedURLException
@@ -24,6 +26,8 @@ public class LightboxAssetRepr extends AssetRepr
 							 URL contentUrl,
 							 URL contentUrlUrl,
 							 URL displayUrl,
+							 URL thumbnailUrl,
+							 URL previewUrl,
 							 List<AttributeValueRepr> attributes,
 							 boolean submitted,
 							 boolean approved,
@@ -32,6 +36,8 @@ public class LightboxAssetRepr extends AssetRepr
 	{
 		super(url, contentUrl, contentUrlUrl, displayUrl, attributes, submitted, approved, parents, type);
 		this.assetInLightboxUrl = assetInLightboxUrl;
+		this.thumbnailUrl = thumbnailUrl;
+		this.previewUrl = previewUrl;
 	}
 
 
