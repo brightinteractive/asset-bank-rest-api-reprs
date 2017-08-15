@@ -28,6 +28,8 @@ public class AssetRepr
 	public URL contentUrl;
 	public URL contentUrlUrl;
 	public URL displayUrl;
+	public URL thumbnailUrl;
+	public URL previewUrl;
 	
 	@XmlElementWrapper
 	@XmlElement(name = "attribute")
@@ -42,7 +44,9 @@ public class AssetRepr
 	public AssetRepr(URL url, 
 					 URL contentUrl,
 					 URL contentUrlUrl,
-					 URL displayUrl, 
+					 URL displayUrl,
+					 URL thumbnailUrl,
+					 URL previewUrl,
 					 List<AttributeValueRepr> attributes, 
 					 boolean submitted,
 					 boolean approved,
@@ -55,6 +59,8 @@ public class AssetRepr
 		this.contentUrl = contentUrl;
 		this.contentUrlUrl = contentUrlUrl;
 		this.displayUrl = displayUrl;
+		this.thumbnailUrl = thumbnailUrl;
+		this.previewUrl = previewUrl;
 		this.attributes = Collections.unmodifiableList(attributes);
 		this.parents = parents;
 		this.type = type;
