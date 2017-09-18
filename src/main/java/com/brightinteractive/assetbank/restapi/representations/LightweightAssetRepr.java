@@ -22,7 +22,7 @@ public class LightweightAssetRepr
 	public URL fullAssetUrl;
 	public URL thumbnailUrl;
 	public URL previewUrl;
-	public long dateLastModifiedTimestamp;
+	public Long dateLastModifiedTimestamp;
 	public boolean approved;
 
 	@XmlElementWrapper
