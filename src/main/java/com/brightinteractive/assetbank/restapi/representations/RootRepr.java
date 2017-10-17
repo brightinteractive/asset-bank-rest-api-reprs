@@ -78,7 +78,7 @@ public class RootRepr {
 		public URL categoriesUrl;
 		public URL pendingUploadApprovalsUrl;
 		public URL pendingEditApprovalsUrl;
-		public URL authenticatedUserResourcesUrl;
+		public URL authenticatedUserUrl;
     }
 
     public String api_name;
@@ -113,7 +113,7 @@ public class RootRepr {
 					URL categoriesUrl,
 					URL pendingUploadApprovalsUrl,
 					URL pendingEditApprovalsUrl,
-                    URL authenticatedUserResourcesUrl)
+                    URL authenticatedUserUrl)
 
     {
         api_name = API_NAME;
@@ -163,6 +163,6 @@ public class RootRepr {
 		api_version_1_3.categoriesUrl = categoriesUrl;
 		api_version_1_3.pendingUploadApprovalsUrl = pendingUploadApprovalsUrl;
 		api_version_1_3.pendingEditApprovalsUrl = pendingEditApprovalsUrl;
-        api_version_1_3.authenticatedUserResourcesUrl = authenticatedUserResourcesUrl;
+        api_version_1_3.authenticatedUserUrl = authenticatedUserUrl;
     }
 }
