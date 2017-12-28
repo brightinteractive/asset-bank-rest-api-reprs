@@ -23,6 +23,8 @@ public class LightboxAssetReprTest
 		URL displayUrl = new URL("http://display.url/");
 		URL thumbnailUrl = new URL("http://thumbnail.url/");
 		URL previewUrl = new URL("http://preview.url/");
+		URL fullSizePreviewUrl = new URL("http://fullSizePreview.url/");
+
 		List<AttributeValueRepr> attributes = new ArrayList<AttributeValueRepr>();
 		Collection<URL> parents = new ArrayList<URL>();
 		String type = "type";
@@ -35,6 +37,7 @@ public class LightboxAssetReprTest
 				displayUrl,
 				thumbnailUrl,
 				previewUrl,
+				fullSizePreviewUrl,
 				attributes,
 				true,
 				true,
@@ -49,6 +52,7 @@ public class LightboxAssetReprTest
 		assertEquals(displayUrl, lightboxAssetRepr.displayUrl);
 		assertEquals(thumbnailUrl, lightboxAssetRepr.thumbnailUrl);
 		assertEquals(previewUrl, lightboxAssetRepr.previewUrl);
+		assertEquals(fullSizePreviewUrl, lightboxAssetRepr.fullSizePreviewUrl);
 		assertEquals(attributes, lightboxAssetRepr.attributes);
 		assertEquals(type, lightboxAssetRepr.type);
 	}
