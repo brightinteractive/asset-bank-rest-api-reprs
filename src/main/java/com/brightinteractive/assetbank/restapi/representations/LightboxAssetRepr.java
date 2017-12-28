@@ -1,10 +1,11 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collection;
 import java.util.List;
+
+import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "asset")
 public class LightboxAssetRepr extends AssetRepr
@@ -25,14 +26,13 @@ public class LightboxAssetRepr extends AssetRepr
 							 URL displayUrl,
 							 URL thumbnailUrl,
 							 URL previewUrl,
-							 URL fullSizePreviewUrl,
 							 List<AttributeValueRepr> attributes,
 							 boolean submitted,
 							 boolean approved,
 							 Collection<URL> parents,
 							 String type)
 	{
-		super(url, contentUrl, contentUrlUrl, displayUrl, thumbnailUrl, previewUrl, fullSizePreviewUrl, attributes, submitted, approved, parents, type);
+		super(url, contentUrl, contentUrlUrl, displayUrl, thumbnailUrl, previewUrl, attributes, submitted, approved, parents, type);
 		this.assetInLightboxUrl = assetInLightboxUrl;
 	}
 
