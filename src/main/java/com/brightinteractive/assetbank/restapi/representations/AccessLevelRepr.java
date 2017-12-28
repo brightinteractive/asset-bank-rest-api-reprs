@@ -32,31 +32,24 @@ public class AccessLevelRepr
 	public String name;
 	public String description;
 	public URL parent;
+	public boolean isAlwaysAssignable;
+	public boolean hasPermissions;
+	public boolean isSelectedOnLoad;
+	public boolean isBrowsable;
+	public boolean showPromotedItems;
+	public boolean showRecentItems;
 	@XmlElementWrapper
 	@XmlElement(name = "accessLevel")
 	public Collection<AccessLevelRepr> children;
 
-	public AccessLevelRepr()
-    {
-    }
+	public AccessLevelRepr() {}
 
-    public AccessLevelRepr(URL url,
-						   long id,
-						   String name,
-						   String description,
-						   Collection<AccessLevelRepr> children,
-						   URL parent)
+	public void setChildren(Collection<AccessLevelRepr> children)
 	{
-		this.url = url;
-    	this.id = id;
-    	this.name = name;
-    	this.description = description;
-    	this.children = Collections.unmodifiableCollection(children);
-    	this.parent = parent;
+		this.children = Collections.unmodifiableCollection(children);
 	}
-    
-    
-    public boolean hasParent ()
+
+	public boolean hasParent ()
     {
     	return parent != null;
     }
