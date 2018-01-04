@@ -22,6 +22,7 @@ public class LightweightAssetRepr
 	public URL fullAssetUrl;
 	public URL thumbnailUrl;
 	public URL previewUrl;
+	public URL unwatermarkedLargeImageUrl;
 	public Long dateLastModifiedTimestamp;
 	public boolean approved;
 
