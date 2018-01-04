@@ -26,13 +26,14 @@ public class LightboxAssetRepr extends AssetRepr
 							 URL displayUrl,
 							 URL thumbnailUrl,
 							 URL previewUrl,
+							 URL unwatermarkedLargeImageUrl,
 							 List<AttributeValueRepr> attributes,
 							 boolean submitted,
 							 boolean approved,
 							 Collection<URL> parents,
 							 String type)
 	{
-		super(url, contentUrl, contentUrlUrl, displayUrl, thumbnailUrl, previewUrl, attributes, submitted, approved, parents, type);
+		super(url, contentUrl, contentUrlUrl, displayUrl, thumbnailUrl, previewUrl, unwatermarkedLargeImageUrl, attributes, submitted, approved, parents, type);
 		this.assetInLightboxUrl = assetInLightboxUrl;
 	}
 
