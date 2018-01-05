@@ -30,6 +30,7 @@ public class AssetRepr
 	public URL displayUrl;
 	public URL thumbnailUrl;
 	public URL previewUrl;
+	public URL conversionUrl;
 	public URL unwatermarkedLargeImageUrl;
 	
 	@XmlElementWrapper
@@ -49,7 +50,8 @@ public class AssetRepr
 					 URL thumbnailUrl,
 					 URL previewUrl,
 					 URL unwatermarkedLargeImageUrl,
-					 List<AttributeValueRepr> attributes, 
+					 URL conversionUrl,
+					 List<AttributeValueRepr> attributes,
 					 boolean submitted,
 					 boolean approved,
 					 Collection<URL> parents,
@@ -64,6 +66,7 @@ public class AssetRepr
 		this.thumbnailUrl = thumbnailUrl;
 		this.previewUrl = previewUrl;
 		this.unwatermarkedLargeImageUrl = unwatermarkedLargeImageUrl;
+		this.conversionUrl = conversionUrl;
 		this.attributes = Collections.unmodifiableList(attributes);
 		this.parents = parents;
 		this.type = type;
