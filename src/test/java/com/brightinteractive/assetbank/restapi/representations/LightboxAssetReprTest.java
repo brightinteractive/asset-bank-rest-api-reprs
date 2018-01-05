@@ -24,6 +24,7 @@ public class LightboxAssetReprTest
 		URL thumbnailUrl = new URL("http://thumbnail.url/");
 		URL previewUrl = new URL("http://preview.url/");
 		URL unwatermarkedLargeImageUrl = new URL("http://unwatermarked-large.url/");
+		URL conversionUrl = new URL("http://conversion.url/");
 		List<AttributeValueRepr> attributes = new ArrayList<AttributeValueRepr>();
 		Collection<URL> parents = new ArrayList<URL>();
 		String type = "type";
@@ -37,6 +38,7 @@ public class LightboxAssetReprTest
 				thumbnailUrl,
 				previewUrl,
 				unwatermarkedLargeImageUrl,
+				conversionUrl,
 				attributes,
 				true,
 				true,
@@ -52,6 +54,7 @@ public class LightboxAssetReprTest
 		assertEquals(thumbnailUrl, lightboxAssetRepr.thumbnailUrl);
 		assertEquals(previewUrl, lightboxAssetRepr.previewUrl);
 		assertEquals(unwatermarkedLargeImageUrl, lightboxAssetRepr.unwatermarkedLargeImageUrl);
+		assertEquals(conversionUrl, lightboxAssetRepr.conversionUrl);
 		assertEquals(attributes, lightboxAssetRepr.attributes);
 		assertEquals(type, lightboxAssetRepr.type);
 	}
