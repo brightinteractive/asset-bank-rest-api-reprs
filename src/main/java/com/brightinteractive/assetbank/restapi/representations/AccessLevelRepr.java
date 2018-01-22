@@ -32,6 +32,7 @@ public class AccessLevelRepr
 	public String name;
 	public String description;
 	public URL parent;
+	public URL imageUrl;
 	public boolean isAlwaysAssignable;
 	public boolean hasPermissions;
 	public boolean isSelectedOnLoad;
