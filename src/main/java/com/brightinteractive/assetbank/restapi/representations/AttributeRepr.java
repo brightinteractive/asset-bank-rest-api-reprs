@@ -21,6 +21,7 @@ public class AttributeRepr
 {
 	public long id;
 	public String label;
+	public String staticName;
 	public long typeId;
 	public URL url;
 	public URL listValuesUrl;
@@ -38,6 +39,21 @@ public class AttributeRepr
 	{
 		id = a_id;
 		label = a_label;
+		typeId = a_typeId;
+		url = a_url;
+		listValuesUrl = a_listValuesUrl;
+	}
+
+	public AttributeRepr(long a_id,
+						 String a_label,
+						 String a_staticName,
+						 long a_typeId,
+						 URL a_url,
+						 URL a_listValuesUrl)
+	{
+		id = a_id;
+		label = a_label;
+		staticName = a_staticName;
 		typeId = a_typeId;
 		url = a_url;
 		listValuesUrl = a_listValuesUrl;
