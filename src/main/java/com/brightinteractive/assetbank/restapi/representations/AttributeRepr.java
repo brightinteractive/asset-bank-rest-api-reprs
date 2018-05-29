@@ -39,6 +39,7 @@ public class AttributeRepr
 	{
 		id = a_id;
 		label = a_label;
+		staticName = null;
 		typeId = a_typeId;
 		url = a_url;
 		listValuesUrl = a_listValuesUrl;
