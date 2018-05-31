@@ -6,7 +6,7 @@ import java.net.URL;
 /**
  * @author Bright Interactive
  */
-@XmlRootElement(name="embeddedDataMapping")
+@XmlRootElement(name = "embeddedDataMapping")
 public class EmbeddedDataMappingRepr
 {
 	public URL url;
@@ -17,9 +17,11 @@ public class EmbeddedDataMappingRepr
 	public URL attributeUrl;
 	public String attributeLabel = "";
 
-    public EmbeddedDataMappingRepr() {}
+	public EmbeddedDataMappingRepr()
+	{
+	}
 
-    public EmbeddedDataMappingRepr(URL url,
+	public EmbeddedDataMappingRepr(URL url,
 								   String type,
 								   String name,
 								   String expression,
