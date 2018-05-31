@@ -4,14 +4,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.net.URL;
 
 /**
- * Serializable attribute list value model.
- * 
- * Eg
- * {
- *     "value": "foobar"
- *     <-- ETC -->
- * }
- * 
  * @author Bright Interactive
  */
 @XmlRootElement(name="embeddedDataMapping")
