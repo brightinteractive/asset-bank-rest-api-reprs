@@ -79,6 +79,7 @@ public class RootRepr {
 		public URL pendingUploadApprovalsUrl;
 		public URL pendingEditApprovalsUrl;
 		public URL authenticatedUserUrl;
+		public URL embeddedDataMappingsUrl;
     }
 
     public String api_name;
@@ -113,7 +114,8 @@ public class RootRepr {
 					URL categoriesUrl,
 					URL pendingUploadApprovalsUrl,
 					URL pendingEditApprovalsUrl,
-                    URL authenticatedUserUrl)
+                    URL authenticatedUserUrl,
+                    URL embeddedDataMappingsUrl)
 
     {
         api_name = API_NAME;
@@ -164,5 +166,6 @@ public class RootRepr {
 		api_version_1_3.pendingUploadApprovalsUrl = pendingUploadApprovalsUrl;
 		api_version_1_3.pendingEditApprovalsUrl = pendingEditApprovalsUrl;
         api_version_1_3.authenticatedUserUrl = authenticatedUserUrl;
+        api_version_1_3.embeddedDataMappingsUrl = embeddedDataMappingsUrl;
     }
 }
