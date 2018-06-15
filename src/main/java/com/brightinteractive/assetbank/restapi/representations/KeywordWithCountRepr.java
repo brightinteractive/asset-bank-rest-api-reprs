@@ -1,0 +1,32 @@
+package com.brightinteractive.assetbank.restapi.representations;
+
+/*
+ * Copyright 2018 Bright Interactive, All Rights Reserved.
+ */
+
+import java.net.URL;
+import java.util.Collection;
+import javax.xml.bind.annotation.XmlRootElement;
+
+
+@XmlRootElement(name="keyword")
+public class KeywordWithCountRepr extends KeywordRepr
+{
+	public int count;
+
+	public KeywordWithCountRepr()
+    {
+    }
+
+    public KeywordWithCountRepr(URL url,
+								 long id,
+    							 String name,
+    							 String synonyms,
+    							 Collection<KeywordRepr> children,
+    							 URL parent,
+    							 int count)
+	{
+    	super(url, id, name, synonyms, children, parent);
+    	this.count = count;
+	}
+}

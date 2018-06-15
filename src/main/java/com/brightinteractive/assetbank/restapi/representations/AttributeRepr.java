@@ -25,38 +25,38 @@ public class AttributeRepr
 	public long typeId;
 	public URL url;
 	public URL listValuesUrl;
+	public URL keywordsUrl;
 	
     public AttributeRepr() throws MalformedURLException
     {
     	url = new URL("http://example.com");
     }
 
-	public AttributeRepr(long a_id,
-						 String a_label,
-						 long a_typeId,
-						 URL a_url,
-						 URL a_listValuesUrl)
+	public AttributeRepr(long id,
+						 String label,
+						 long typeId,
+						 URL url,
+						 URL listValuesUrl,
+						 URL keywordsUrl)
 	{
-		id = a_id;
-		label = a_label;
-		staticName = null;
-		typeId = a_typeId;
-		url = a_url;
-		listValuesUrl = a_listValuesUrl;
+		this.id = id;
+		this.label = label;
+		this.staticName = null;
+		this.typeId = typeId;
+		this.url = url;
+		this.listValuesUrl = listValuesUrl;
+		this.keywordsUrl = keywordsUrl;
 	}
 
-	public AttributeRepr(long a_id,
-						 String a_label,
-						 String a_staticName,
-						 long a_typeId,
-						 URL a_url,
-						 URL a_listValuesUrl)
+	public AttributeRepr(long id,
+						 String label,
+						 String staticName,
+						 long typeId,
+						 URL url,
+						 URL listValuesUrl,
+						 URL keywordsUrl)
 	{
-		id = a_id;
-		label = a_label;
-		staticName = a_staticName;
-		typeId = a_typeId;
-		url = a_url;
-		listValuesUrl = a_listValuesUrl;
+		this(id, label, typeId, url, listValuesUrl, keywordsUrl);
+		this.staticName = staticName;
 	}
 }
