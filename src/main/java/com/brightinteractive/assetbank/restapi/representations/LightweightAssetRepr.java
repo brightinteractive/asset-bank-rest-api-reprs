@@ -25,6 +25,7 @@ public class LightweightAssetRepr
 	public URL unwatermarkedLargeImageUrl;
 	public Long dateLastModifiedTimestamp;
 	public boolean approved;
+	public long typeId;
 
 	@XmlElementWrapper
 	@XmlElement(name = "displayAttribute")
