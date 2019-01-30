@@ -1,3 +1,8 @@
+This project is archived (2019-01-30)
+
+The classes used in Asset Bank were moved into that code base directly. A similar process can be applied if they are needed in other projects. 
+
+
 Asset Bank REST API Representations
 ===================================
 
