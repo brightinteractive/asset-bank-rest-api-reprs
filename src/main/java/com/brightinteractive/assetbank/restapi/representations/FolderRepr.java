@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 
 /**
- * Serializable category info models.
+ * Serializable folder info models.
  * <p>
  * Eg
  * {
@@ -20,34 +20,30 @@ import javax.xml.bind.annotation.XmlSeeAlso;
  *
  * @author Bright
  */
-@XmlRootElement(name = "category")
-@XmlSeeAlso({ CategoryWithCountRepr.class })
-public class CategoryRepr {
+@XmlRootElement(name = "accessLevel")
+@XmlSeeAlso({ FolderWithCountRepr.class })
+public class FolderRepr {
   public URL url;
   public long id;
   public String name;
   public String description;
   public URL parent;
-
+  public URL imageUrl;
+  public boolean isAlwaysAssignable;
+  public boolean hasPermissions;
+  public boolean isSelectedOnLoad;
+  public boolean isBrowsable;
+  public boolean showPromotedItems;
+  public boolean showRecentItems;
   @XmlElementWrapper
-  @XmlElement(name = "category")
-  public Collection<CategoryRepr> children;
+  @XmlElement(name = "accessLevel")
+  public Collection<FolderRepr> children;
 
-  public CategoryRepr() {
+  public FolderRepr() {
   }
 
-  public CategoryRepr(URL url,
-      long id,
-      String name,
-      String description,
-      Collection<CategoryRepr> children,
-      URL parent) {
-    this.url = url;
-    this.id = id;
-    this.name = name;
-    this.description = description;
+  public void setChildren(Collection<FolderRepr> children) {
     this.children = Collections.unmodifiableCollection(children);
-    this.parent = parent;
   }
 
   public boolean hasParent() {

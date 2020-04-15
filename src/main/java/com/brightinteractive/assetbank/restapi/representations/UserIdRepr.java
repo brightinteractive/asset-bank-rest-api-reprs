@@ -4,27 +4,27 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Serializable user id model.
- * 
+ * <p>
  * Eg
  * {
- *     "userId": 1
+ * "userId": 1
  * }
- * 
- * @author Bright Interactive
+ *
+ * @author Bright
  */
-@XmlRootElement(name="userId")
+@XmlRootElement(name = "userId")
 public class UserIdRepr {
 
-	public long userId;
+  public long userId;
 
-    // just to make JAXB happy
-    public UserIdRepr()
-    {
-    	userId = 0;
-    };
+  // just to make JAXB happy
+  public UserIdRepr() {
+    userId = 0;
+  }
 
-	public UserIdRepr(long a_userId) 
-	{
-		userId = a_userId;
-	}
+  ;
+
+  public UserIdRepr(long a_userId) {
+    userId = a_userId;
+  }
 }

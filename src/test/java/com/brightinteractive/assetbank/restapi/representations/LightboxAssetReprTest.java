@@ -7,7 +7,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.junit.Test;
 
 public class LightboxAssetReprTest
@@ -28,6 +27,7 @@ public class LightboxAssetReprTest
 		List<AttributeValueRepr> attributes = new ArrayList<AttributeValueRepr>();
 		Collection<URL> parents = new ArrayList<URL>();
 		String type = "type";
+		String accessLevelIds = "1,2";
 
 		LightboxAssetRepr lightboxAssetRepr = new LightboxAssetRepr(
 				assetInLightboxUrl,
@@ -43,7 +43,8 @@ public class LightboxAssetReprTest
 				true,
 				true,
 				parents,
-				type
+				type,
+				accessLevelIds
 		);
 
 		assertEquals(assetInLightboxUrl, lightboxAssetRepr.assetInLightboxUrl);
@@ -57,5 +58,6 @@ public class LightboxAssetReprTest
 		assertEquals(conversionUrl, lightboxAssetRepr.conversionUrl);
 		assertEquals(attributes, lightboxAssetRepr.attributes);
 		assertEquals(type, lightboxAssetRepr.type);
+		assertEquals(accessLevelIds, lightboxAssetRepr.accessLevelIds);
 	}
 }

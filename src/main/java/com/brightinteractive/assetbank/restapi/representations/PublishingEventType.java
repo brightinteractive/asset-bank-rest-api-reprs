@@ -1,16 +1,15 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
 /*
- * Copyright 2012 Bright Interactive, All Rights Reserved.
+ * Copyright 2012 Bright, All Rights Reserved.
  */
 
 /**
  * The type of a PublishingEventRepr
  *
- * @author Bright Interactive
+ * @author Bright
  */
-public enum PublishingEventType
-{
-	PUBLISH,
-	UNPUBLISH
+public enum PublishingEventType {
+  PUBLISH,
+  UNPUBLISH
 }

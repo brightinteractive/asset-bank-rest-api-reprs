@@ -1,7 +1,7 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
 /*
- * Copyright 2012 Bright Interactive, All Rights Reserved.
+ * Copyright 2012 Bright, All Rights Reserved.
  */
 
 import javax.xml.bind.annotation.XmlRootElement;
@@ -16,19 +16,16 @@ import javax.xml.bind.annotation.XmlRootElement;
  * }
  * </pre>
  *
- * @author Bright Interactive
+ * @author Bright
  */
-@XmlRootElement(name="publishingActionId")
-public class PublishingActionIdRepr
-{
-	public long publishingActionId;
+@XmlRootElement(name = "publishingActionId")
+public class PublishingActionIdRepr {
+  public long publishingActionId;
 
-	public PublishingActionIdRepr()
-	{
-	}
+  public PublishingActionIdRepr() {
+  }
 
-	public PublishingActionIdRepr(long a_publishingActionId)
-	{
-		publishingActionId = a_publishingActionId;
-	}
+  public PublishingActionIdRepr(long a_publishingActionId) {
+    publishingActionId = a_publishingActionId;
+  }
 }

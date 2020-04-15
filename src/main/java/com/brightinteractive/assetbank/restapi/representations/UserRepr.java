@@ -3,59 +3,57 @@ package com.brightinteractive.assetbank.restapi.representations;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collection;
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Serializable user model.
- * 
+ * <p>
  * Eg
  * {
- *     "username": "foo",
- *     "forname": "bar"
- *     <-- ETC -->
+ * "username": "foo",
+ * "forname": "bar"
+ * <-- ETC -->
  * }
- * 
- * @author Bright Interactive
+ *
+ * @author Bright
  */
-@XmlRootElement(name="user")
-public class UserRepr 
-{
-	public URL url;
-	public URL lightboxUrl;
-	public long id;
-	public String username = null;
-	public String forename = null;
-	public String surname = null;
-	public String emailAddress = null;
-	@XmlElementWrapper
-	@XmlElement(name = "groupId")
-	public Collection<Long> groupIds = null;
-	
-	
-	public UserRepr() throws MalformedURLException 
-    {
-    	url = new URL("http://example.com");
-    }
+@XmlRootElement(name = "user")
+public class UserRepr {
+  public URL url;
+  public URL lightboxUrl;
+  public long id;
+  public String username = null;
+  public String forename = null;
+  public String surname = null;
+  public String emailAddress = null;
+  @XmlElementWrapper
+  @XmlElement(name = "groupId")
+  public Collection<Long> groupIds = null;
+  public boolean isAdmin = false;
 
-	public UserRepr(URL a_url,
-					URL a_lightboxUrl,
-					long a_id,
-					String a_username,
-					String a_forename,
-					String a_surname,
-					String a_emailAddress,
-					Collection<Long> a_groupIds) throws MalformedURLException 
-	{
-		url = a_url;
-		lightboxUrl = a_lightboxUrl;
-		id = a_id;
-		username = a_username;
-		forename = a_forename;
-		surname = a_surname;
-		emailAddress = a_emailAddress;
-		groupIds = a_groupIds;
-	}
+  public UserRepr() throws MalformedURLException {
+    url = new URL("http://example.com");
+  }
+
+  public UserRepr(URL a_url,
+      URL lightboxUrl,
+      long id,
+      String username,
+      String forename,
+      String surname,
+      String emailAddress,
+      Collection<Long> groupIds,
+      boolean isAdmin) {
+    url = a_url;
+    this.lightboxUrl = lightboxUrl;
+    this.id = id;
+    this.username = username;
+    this.forename = forename;
+    this.surname = surname;
+    this.emailAddress = emailAddress;
+    this.groupIds = groupIds;
+    this.isAdmin = isAdmin;
+  }
 }

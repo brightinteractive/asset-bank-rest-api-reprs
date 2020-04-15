@@ -11,18 +11,18 @@ import org.junit.Test;
 /**
  * @author Bright Interactive
  */
-public class AccessLevelWithCountReprTest
+public class FolderlWithCountReprTest
 {
 	@Test
 	public void testAccessLevelWithCountReprHasCount()
 	{
-		AccessLevelWithCountRepr repr = new  AccessLevelWithCountRepr();
+		FolderWithCountRepr repr = new  FolderWithCountRepr();
 		repr.count = 1;
 	}
 
 	@Test
 	public void testAccessLevelWithCountReprXmlRootElement()
 	{
-		assertXmlRootElementNameEquals("accessLevel", AccessLevelWithCountRepr.class);
+		assertXmlRootElementNameEquals("accessLevel", FolderWithCountRepr.class);
 	}
 }

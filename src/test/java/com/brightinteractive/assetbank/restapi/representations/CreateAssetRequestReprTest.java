@@ -11,7 +11,7 @@ public class CreateAssetRequestReprTest
 	@Test
 	public void constructCreateAssetRequestReprTestSubmitDefaultsToTrue()
 	{
-		CreateAssetRequestRepr rep = new CreateAssetRequestRepr(new ArrayList<AccessLevelRepr>());
+		CreateAssetRequestRepr rep = new CreateAssetRequestRepr(new ArrayList<FolderRepr>());
 		assertTrue(rep.submit);
 	}	
 }

@@ -1,12 +1,11 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.net.URL;
+import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="editorDependency")
-public class EditorDependencyRepr
-{
-	public URL url;
-	public String originalFilename;
+@XmlRootElement(name = "editorDependency")
+public class EditorDependencyRepr {
+  public URL url;
+  public String originalFilename;
 
 }
