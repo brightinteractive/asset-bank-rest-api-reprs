@@ -1,12 +1,11 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
 /*
- * Copyright 2013 Bright Interactive, All Rights Reserved.
+ * Copyright 2013 Bright, All Rights Reserved.
  */
 
 import java.net.URL;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -17,25 +16,22 @@ import javax.xml.bind.annotation.XmlRootElement;
  * <p>This is kept to a minimum - the usual process is that an asset is created
  * and then immediately updated, instead of being created fully populated.</p>
  *
- * @author Bright Interactive
+ * @author Bright
  */
-@XmlRootElement(name="createAsset")
-public class CreateAssetRequestRepr
-{
-	public boolean submit = true;
-	public long createAsUserId = -1;
-	public URL assetTypeUrl;
-	
-	@XmlElementWrapper
-	@XmlElement(name = "accessLevel")
-	public List<AccessLevelRepr> accessLevels;
+@XmlRootElement(name = "createAsset")
+public class CreateAssetRequestRepr {
+  public boolean submit = true;
+  public long createAsUserId = -1;
+  public URL assetTypeUrl;
 
-	public CreateAssetRequestRepr(List<AccessLevelRepr> a_accessLevels)
-	{
-		accessLevels = a_accessLevels;
-	}
+  @XmlElementWrapper
+  @XmlElement(name = "accessLevel")
+  public List<FolderRepr> accessLevels;
 
-	public CreateAssetRequestRepr()
-	{
-	}
+  public CreateAssetRequestRepr(List<FolderRepr> accessLevels) {
+    this.accessLevels = accessLevels;
+  }
+
+  public CreateAssetRequestRepr() {
+  }
 }

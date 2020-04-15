@@ -4,29 +4,26 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Serializable Asset ID model.
- * 
+ * <p>
  * Eg
- * 
+ * <p>
  * {
- *     "assetId": 123
+ * "assetId": 123
  * }
- * 
- * @author Bright Interactive
+ *
+ * @author Bright
  */
-@XmlRootElement(name="assetId")
-public class AssetIdRepr
-{
+@XmlRootElement(name = "assetId")
+public class AssetIdRepr {
 
-	public long assetId;
+  public long assetId;
 
-    // just to make JAXB happy
-    public AssetIdRepr()
-    {
-    	assetId = 0;
-    }
+  // just to make JAXB happy
+  public AssetIdRepr() {
+    assetId = 0;
+  }
 
-	public AssetIdRepr(long a_assetId) 
-	{
-		assetId = a_assetId;
-	}
+  public AssetIdRepr(long a_assetId) {
+    assetId = a_assetId;
+  }
 }
