@@ -32,6 +32,7 @@ public class UserRepr {
   @XmlElement(name = "groupId")
   public Collection<Long> groupIds = null;
   public boolean isAdmin = false;
+  public boolean isOrgUnitAdmin = false;
 
   public UserRepr() throws MalformedURLException {
     url = new URL("http://example.com");
@@ -45,7 +46,8 @@ public class UserRepr {
       String surname,
       String emailAddress,
       Collection<Long> groupIds,
-      boolean isAdmin) {
+      boolean isAdmin,
+      boolean isOrgUnitAdmin) {
     url = a_url;
     this.lightboxUrl = lightboxUrl;
     this.id = id;
@@ -55,5 +57,6 @@ public class UserRepr {
     this.emailAddress = emailAddress;
     this.groupIds = groupIds;
     this.isAdmin = isAdmin;
+    this.isOrgUnitAdmin = isOrgUnitAdmin;
   }
 }
