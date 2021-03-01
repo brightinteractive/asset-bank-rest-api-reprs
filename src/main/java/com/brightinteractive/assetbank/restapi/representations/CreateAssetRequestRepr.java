@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "createAsset")
 public class CreateAssetRequestRepr {
   public boolean submit = true;
+  public boolean populateDefaults = false;
   public long createAsUserId = -1;
   public URL assetTypeUrl;
 
