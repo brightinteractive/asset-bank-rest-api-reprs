@@ -1,6 +1,5 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,20 +25,21 @@ public class LightweightAssetRepr {
   public long typeId;
   public String typeName;
   public String accessLevelIds;
+  public long fileSizeInBytes;
 
   @XmlElementWrapper
   @XmlElement(name = "displayAttribute")
-  public List<DisplayAttributeRepr> displayAttributes = new ArrayList<DisplayAttributeRepr>();
+  public List<DisplayAttributeRepr> displayAttributes = new ArrayList<>();
 
-  public LightweightAssetRepr() throws MalformedURLException {
+  public LightweightAssetRepr() {
   }
 
-  public LightweightAssetRepr(long id, URL fullAssetUrl, String originalFilename,
-      boolean approved) {
+  public LightweightAssetRepr(long id, URL fullAssetUrl, String originalFilename, boolean approved, long fileSizeInBytes) {
     this.id = id;
     this.fullAssetUrl = fullAssetUrl;
     this.originalFilename = originalFilename;
     this.approved = approved;
+    this.fileSizeInBytes = fileSizeInBytes;
   }
 
   public int getNumberOfDisplayAttributesWithLabel(String label) {
