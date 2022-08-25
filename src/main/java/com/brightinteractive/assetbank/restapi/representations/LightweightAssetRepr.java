@@ -2,16 +2,12 @@ package com.brightinteractive.assetbank.restapi.representations;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- * Serializable LightweightAsset model.
- *
- * @author Bright
- */
 @XmlRootElement(name = "assetSummary")
 public class LightweightAssetRepr {
   public long id = 0;
@@ -25,21 +21,28 @@ public class LightweightAssetRepr {
   public long typeId;
   public String typeName;
   public String accessLevelIds;
-  public long fileSizeInBytes;
 
   @XmlElementWrapper
   @XmlElement(name = "displayAttribute")
   public List<DisplayAttributeRepr> displayAttributes = new ArrayList<>();
 
+  @XmlElementWrapper
+  @XmlElement(name = "attribute")
+  public List<SearchAttributeValueRepr> attributes;
+
   public LightweightAssetRepr() {
   }
 
-  public LightweightAssetRepr(long id, URL fullAssetUrl, String originalFilename, boolean approved, long fileSizeInBytes) {
+  public LightweightAssetRepr(long id,
+                              URL fullAssetUrl,
+                              String originalFilename,
+                              boolean approved,
+                              List<SearchAttributeValueRepr> attributes) {
     this.id = id;
     this.fullAssetUrl = fullAssetUrl;
     this.originalFilename = originalFilename;
     this.approved = approved;
-    this.fileSizeInBytes = fileSizeInBytes;
+    this.attributes = Collections.unmodifiableList(attributes);
   }
 
   public int getNumberOfDisplayAttributesWithLabel(String label) {
@@ -51,7 +54,7 @@ public class LightweightAssetRepr {
   }
 
   public List<String> getDisplayAttributeValuesWithLabel(String label) {
-    List<String> values = new ArrayList<String>();
+    List<String> values = new ArrayList<>();
     for (DisplayAttributeRepr attribute : displayAttributes) {
       if (attribute.label.equals(label)) {
         values.add(attribute.value);
