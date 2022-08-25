@@ -28,7 +28,7 @@ public class LightweightAssetRepr {
 
   @XmlElementWrapper
   @XmlElement(name = "attribute")
-  public List<AttributeValueRepr> attributes;
+  public List<SearchAttributeValueRepr> attributes;
 
   public LightweightAssetRepr() {
   }
@@ -37,7 +37,7 @@ public class LightweightAssetRepr {
                               URL fullAssetUrl,
                               String originalFilename,
                               boolean approved,
-                              List<AttributeValueRepr> attributes) {
+                              List<SearchAttributeValueRepr> attributes) {
     this.id = id;
     this.fullAssetUrl = fullAssetUrl;
     this.originalFilename = originalFilename;
