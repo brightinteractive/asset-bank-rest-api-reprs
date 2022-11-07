@@ -10,6 +10,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class LightboxAssetRepr extends AssetRepr {
 
   public URL assetInLightboxUrl;
+  public String dateAdded;
+  public String dateLastModified;
 
   @SuppressWarnings("unused") // needed to keep JAXB happy
   public LightboxAssetRepr() throws MalformedURLException {
@@ -30,10 +32,14 @@ public class LightboxAssetRepr extends AssetRepr {
       boolean approved,
       Collection<URL> parents,
       String type,
-      String accessLevelIds) {
+      String accessLevelIds,
+      String dateAdded,
+      String dateLastModified) {
     super(url, contentUrl, contentUrlUrl, displayUrl, thumbnailUrl, previewUrl,
         unwatermarkedLargeImageUrl, conversionUrl, attributes, submitted, approved, parents, type, accessLevelIds);
     this.assetInLightboxUrl = assetInLightboxUrl;
+    this.dateAdded = dateAdded;
+    this.dateLastModified = dateLastModified;
   }
 
 
