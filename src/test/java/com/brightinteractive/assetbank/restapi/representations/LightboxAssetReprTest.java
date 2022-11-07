@@ -28,6 +28,8 @@ public class LightboxAssetReprTest
 		Collection<URL> parents = new ArrayList<URL>();
 		String type = "type";
 		String accessLevelIds = "1,2";
+		String dateAdded = "1667824456000";
+		String dateLastModified = "1667824915000";
 
 		LightboxAssetRepr lightboxAssetRepr = new LightboxAssetRepr(
 				assetInLightboxUrl,
@@ -44,7 +46,9 @@ public class LightboxAssetReprTest
 				true,
 				parents,
 				type,
-				accessLevelIds
+				accessLevelIds,
+				dateAdded,
+				dateLastModified
 		);
 
 		assertEquals(assetInLightboxUrl, lightboxAssetRepr.assetInLightboxUrl);
@@ -59,5 +63,7 @@ public class LightboxAssetReprTest
 		assertEquals(attributes, lightboxAssetRepr.attributes);
 		assertEquals(type, lightboxAssetRepr.type);
 		assertEquals(accessLevelIds, lightboxAssetRepr.accessLevelIds);
+		assertEquals(dateAdded, lightboxAssetRepr.dateAdded);
+		assertEquals(dateLastModified, lightboxAssetRepr.dateLastModified);
 	}
 }
