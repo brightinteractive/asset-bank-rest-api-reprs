@@ -13,7 +13,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  * "api_name": "AssetBank RESTful API"
  * "api_version_1_1": {
  * "checkoutUrl": "http://..."
- * "editorDependenciesUrl": "http://..."
  * "lightboxesUrl": "http://..."
  * "assetsUrl": "http://..."
  * "signingUrl": "http://...."
@@ -32,7 +31,6 @@ public class RootRepr {
 
   public static class RootServices_v_1_1 {
     public URL checkoutUrl;
-    public URL editorDependenciesUrl;
     public URL lightboxesUrl;
     public URL assetsUrl;
     public URL signingUrl;
@@ -40,7 +38,6 @@ public class RootRepr {
 
   public static class RootServices_v_1_2 {
     public URL checkoutUrl;
-    public URL editorDependenciesUrl;
     public URL lightboxesUrl;
     public URL assetsUrl;
     public URL usersUrl;
@@ -56,7 +53,6 @@ public class RootRepr {
 
   public static class RootServices_v_1_3 {
     public URL checkoutUrl;
-    public URL editorDependenciesUrl;
     public URL lightboxesUrl;
     public URL assetsUrl;
     public URL usersUrl;
@@ -89,7 +85,6 @@ public class RootRepr {
   }
 
   public RootRepr(URL checkoutUrl,
-      URL editorDependenciesUrl,
       URL lightboxesUrl,
       URL lightboxes_v1_1_Url,
       URL assetsUrl,
@@ -116,7 +111,6 @@ public class RootRepr {
     //build the 1.1 version...
     api_version_1_1 = new RootServices_v_1_1();
     api_version_1_1.checkoutUrl = checkoutUrl;
-    api_version_1_1.editorDependenciesUrl = editorDependenciesUrl;
     api_version_1_1.lightboxesUrl = lightboxes_v1_1_Url;
     api_version_1_1.assetsUrl = assets_v1_2_Url;
     api_version_1_1.signingUrl = signingUrl;
@@ -124,7 +118,6 @@ public class RootRepr {
     //and now the 1.2...
     api_version_1_2 = new RootServices_v_1_2();
     api_version_1_2.checkoutUrl = checkoutUrl;
-    api_version_1_2.editorDependenciesUrl = editorDependenciesUrl;
     api_version_1_2.lightboxesUrl = lightboxesUrl;
     api_version_1_2.assetsUrl = assets_v1_2_Url;
     api_version_1_2.usersUrl = usersUrl;
@@ -140,7 +133,6 @@ public class RootRepr {
     //and now the 1.3...
     api_version_1_3 = new RootServices_v_1_3();
     api_version_1_3.checkoutUrl = checkoutUrl;
-    api_version_1_3.editorDependenciesUrl = editorDependenciesUrl;
     api_version_1_3.lightboxesUrl = lightboxesUrl;
     api_version_1_3.assetsUrl = assetsUrl;
     api_version_1_3.usersUrl = usersUrl;
