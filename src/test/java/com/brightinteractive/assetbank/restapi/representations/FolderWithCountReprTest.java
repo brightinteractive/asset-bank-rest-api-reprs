@@ -1,28 +1,18 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-/*
- * Copyright 2012 Bright Interactive, All Rights Reserved.
- */
-
 import static com.brightinteractive.assetbank.restapi.representations.ReprTestUtil.assertXmlRootElementNameEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-/**
- * @author Bright Interactive
- */
-public class FolderlWithCountReprTest
-{
+public class FolderWithCountReprTest {
 	@Test
-	public void testAccessLevelWithCountReprHasCount()
-	{
+	public void testAccessLevelWithCountReprHasCount() {
 		FolderWithCountRepr repr = new  FolderWithCountRepr();
 		repr.count = 1;
 	}
 
 	@Test
-	public void testAccessLevelWithCountReprXmlRootElement()
-	{
+	public void testAccessLevelWithCountReprXmlRootElement() {
 		assertXmlRootElementNameEquals("accessLevel", FolderWithCountRepr.class);
 	}
 }

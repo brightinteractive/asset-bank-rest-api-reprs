@@ -1,22 +1,13 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-/*
- * Copyright 2012 Bright, All Rights Reserved.
- */
-
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.net.URL;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlValue;
-import org.codehaus.jackson.annotate.JsonCreator;
-import org.codehaus.jackson.annotate.JsonValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlValue;
 
-/**
- * The URL of a REST resource (marshallable to XML or JSON).
- *
- * @author Bright
- */
 @XmlRootElement(name = "resource")
 @XmlAccessorType(XmlAccessType.NONE)
 public class ResourceRepr {
@@ -38,7 +29,6 @@ public class ResourceRepr {
   public String getResource() {
     return resource;
   }
-
 
   @JsonCreator
   public void setResource(String resource) {

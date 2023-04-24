@@ -1,17 +1,15 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class CreateAssetRequestReprTest
-{
+public class CreateAssetRequestReprTest {
 	@Test
-	public void constructCreateAssetRequestReprTestSubmitDefaultsToTrue()
-	{
+	public void constructCreateAssetRequestReprTestSubmitDefaultsToTrue() {
 		CreateAssetRequestRepr rep = new CreateAssetRequestRepr(new ArrayList<FolderRepr>());
 		assertTrue(rep.submit);
-	}	
+	}
 }

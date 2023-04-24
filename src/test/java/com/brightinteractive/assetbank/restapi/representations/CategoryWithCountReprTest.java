@@ -1,28 +1,18 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-/*
- * Copyright 2012 Bright Interactive, All Rights Reserved.
- */
-
 import static com.brightinteractive.assetbank.restapi.representations.ReprTestUtil.assertXmlRootElementNameEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-/**
- * @author Bright Interactive
- */
-public class CategoryWithCountReprTest
-{
+public class CategoryWithCountReprTest {
 	@Test
-	public void testCategoryWithCountReprHasCount()
-	{
+	public void testCategoryWithCountReprHasCount() {
 		CategoryWithCountRepr repr = new  CategoryWithCountRepr();
 		repr.count = 1;
 	}
 
 	@Test
-	public void testCategoryWithCountReprXmlRootElement()
-	{
+	public void testCategoryWithCountReprXmlRootElement() {
 		assertXmlRootElementNameEquals("category", CategoryWithCountRepr.class);
 	}
 }

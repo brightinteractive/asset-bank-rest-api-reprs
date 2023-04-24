@@ -4,7 +4,7 @@ package com.brightinteractive.assetbank.restapi.representations;
  * Copyright 2012 Bright, All Rights Reserved.
  */
 
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 /**
  * <p></p>Serializable publishing action ID model.</p>
