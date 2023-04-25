@@ -22,7 +22,7 @@
 
 	<groupId>com.brightinteractive.assetbank</groupId>
 	<artifactId>asset-bank-rest-api-reprs</artifactId>
-	<version>2.0.0-SNAPSHOT</version>
+	<version>2.0.0</version>
 
 	<name>Asset Bank REST API Representations</name>
 	<description>POJOs used to transfer data to/from Asset Bank via its REST API</description>
