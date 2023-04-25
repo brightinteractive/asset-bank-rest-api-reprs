@@ -5,7 +5,7 @@ package com.brightinteractive.assetbank.restapi.representations;
  */
 
 import java.net.URL;
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 /**
  * XML/JSON-serializable publishing action model.

@@ -3,7 +3,7 @@ package com.brightinteractive.assetbank.restapi.representations;
 /*
  * Copyright 2013 Bright, All Rights Reserved.
  */
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "createAttribute")
 public class CreateAttributeRequestRepr {

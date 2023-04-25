@@ -2,7 +2,7 @@ package com.brightinteractive.assetbank.restapi.representations;
 
 import java.net.URL;
 import java.util.Collection;
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 /**
  * Extension of the standard category model including counts.

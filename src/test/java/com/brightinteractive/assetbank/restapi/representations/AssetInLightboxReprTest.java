@@ -1,38 +1,36 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import java.net.MalformedURLException;
 import java.net.URL;
+import org.junit.jupiter.api.Test;
 
-public class AssetInLightboxReprTest
-{
+public class AssetInLightboxReprTest {
+
 	@Test
 	public void canConstructUsingAssetInstanceUrlAndLightboxInstanceUrl()
-			throws MalformedURLException
-	{
-		URL lightboxInstanceUrl = new URL("http://lightbox.com");
-		URL assetInstanceUrl = new URL("http://asset.com");
+			throws MalformedURLException {
+		URL lightboxInstanceUrl = new URL("https://lightbox.com");
+		URL assetInstanceUrl = new URL("https://asset.com");
 		AssetInLightboxRepr assetInLightboxRepr = new AssetInLightboxRepr(
 				assetInstanceUrl,
 				lightboxInstanceUrl
 		);
 
-		Assert.assertEquals(lightboxInstanceUrl, assetInLightboxRepr.lightboxInstanceUrl);
-		Assert.assertEquals(assetInstanceUrl, assetInLightboxRepr.assetInstanceUrl);
+		assertEquals(lightboxInstanceUrl, assetInLightboxRepr.lightboxInstanceUrl);
+		assertEquals(assetInstanceUrl, assetInLightboxRepr.assetInstanceUrl);
 	}
 
 	@Test
-	public void hasDefaultConstructor()
-	{
+	public void hasDefaultConstructor() {
 		new AssetInLightboxRepr();
 	}
 
 	@Test
-	public void hasXMLRootAnnotation()
-	{
-		AssetInLightboxRepr.class.isAnnotationPresent(XmlRootElement.class);
+	public void hasXMLRootAnnotation() {
+		assertTrue(AssetInLightboxRepr.class.isAnnotationPresent(XmlRootElement.class));
 	}
 }

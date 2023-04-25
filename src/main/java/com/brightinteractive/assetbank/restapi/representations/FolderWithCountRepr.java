@@ -1,6 +1,6 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 /**
  * Sub class of the standard folder model to include count

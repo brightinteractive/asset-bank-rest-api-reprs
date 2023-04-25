@@ -1,31 +1,29 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class LightboxAssetReprTest
-{
+public class LightboxAssetReprTest {
 	@Test
 	public void lightboxAssetReprIncludesAssetInLightboxUrlInAdditionToAssetReprValues()
-			throws MalformedURLException
-	{
+			throws MalformedURLException {
 		URL assetInLightboxUrl = new URL("http://asset.in.lightbox.url/");
-		URL url = new URL("http://url.com/");
-		URL contentUrl = new URL("http://content.url/");
-		URL contentUrlUrl = new URL("http://contentUrl.url/");
-		URL displayUrl = new URL("http://display.url/");
-		URL thumbnailUrl = new URL("http://thumbnail.url/");
-		URL previewUrl = new URL("http://preview.url/");
-		URL unwatermarkedLargeImageUrl = new URL("http://unwatermarked-large.url/");
-		URL conversionUrl = new URL("http://conversion.url/");
-		List<AttributeValueRepr> attributes = new ArrayList<AttributeValueRepr>();
-		Collection<URL> parents = new ArrayList<URL>();
+		URL url = new URL("https://url.com/");
+		URL contentUrl = new URL("https://content.url/");
+		URL contentUrlUrl = new URL("https://contentUrl.url/");
+		URL displayUrl = new URL("https://display.url/");
+		URL thumbnailUrl = new URL("https://thumbnail.url/");
+		URL previewUrl = new URL("https://preview.url/");
+		URL unwatermarkedLargeImageUrl = new URL("https://unwatermarked-large.url/");
+		URL conversionUrl = new URL("https://conversion.url/");
+		List<AttributeValueRepr> attributes = new ArrayList<>();
+		Collection<URL> parents = new ArrayList<>();
 		String type = "type";
 		String accessLevelIds = "1,2";
 		String dateAdded = "1667824456000";
