@@ -1,18 +1,16 @@
 /*Copyright 2015 Bright, All Rights Reserved.*/
 package com.brightinteractive.assetbank.restapi.representations;
 
-import java.net.URL;
-import java.util.List;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "asset-type")
-public class AssetEntityRepr {
-  public URL url;
-  public long id;
-  public String name;
+import java.net.URL;
+import java.util.List;
 
+@XmlRootElement(name = "asset-type")
+public class AssetEntityRepr extends LightweightAssetEntityRepr {
+  public URL url;
   public List<String> allowableMediaTypes;
   public String includedFileFormats;
   public String excludedFileFormats;
