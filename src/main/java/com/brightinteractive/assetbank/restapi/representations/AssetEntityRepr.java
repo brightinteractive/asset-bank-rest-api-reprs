@@ -8,11 +8,8 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "asset-type")
-public class AssetEntityRepr {
+public class AssetEntityRepr extends LightweightAssetEntityRepr {
   public URL url;
-  public long id;
-  public String name;
-
   public List<String> allowableMediaTypes;
   public String includedFileFormats;
   public String excludedFileFormats;
