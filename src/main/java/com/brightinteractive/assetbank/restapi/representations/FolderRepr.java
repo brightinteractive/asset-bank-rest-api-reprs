@@ -20,7 +20,9 @@ import jakarta.xml.bind.annotation.XmlSeeAlso;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "accessLevel")
 @XmlRootElement(name = "accessLevel")
+@javax.xml.bind.annotation.XmlSeeAlso({ FolderWithCountRepr.class })
 @XmlSeeAlso({ FolderWithCountRepr.class })
 public class FolderRepr {
   public URL url;
@@ -35,7 +37,9 @@ public class FolderRepr {
   public boolean isBrowsable;
   public boolean showPromotedItems;
   public boolean showRecentItems;
+  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
+  @javax.xml.bind.annotation.XmlElement(name = "accessLevel")
   @XmlElement(name = "accessLevel")
   public Collection<FolderRepr> children;
 

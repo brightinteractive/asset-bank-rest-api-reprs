@@ -6,6 +6,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 /**
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "embeddedDataMapping")
 @XmlRootElement(name = "embeddedDataMapping")
 public class EmbeddedDataMappingRepr {
   public URL url;

@@ -15,6 +15,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "createAccessLevel")
 @XmlRootElement(name = "createAccessLevel")
 public class CreateFolderRequestRepr {
   public String name;

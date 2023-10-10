@@ -8,7 +8,9 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlValue;
 
+@javax.xml.bind.annotation.XmlRootElement(name = "resource")
 @XmlRootElement(name = "resource")
+@javax.xml.bind.annotation.XmlAccessorType(javax.xml.bind.annotation.XmlAccessType.NONE)
 @XmlAccessorType(XmlAccessType.NONE)
 public class ResourceRepr {
   private String resource;
@@ -24,6 +26,7 @@ public class ResourceRepr {
     this(resourceURL.toString());
   }
 
+  @javax.xml.bind.annotation.XmlValue
   @XmlValue
   @JsonValue
   public String getResource() {

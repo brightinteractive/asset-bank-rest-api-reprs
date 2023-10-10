@@ -18,6 +18,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "publishingActionId")
 @XmlRootElement(name = "publishingActionId")
 public class PublishingActionIdRepr {
   public long publishingActionId;

@@ -4,6 +4,7 @@ package com.brightinteractive.assetbank.restapi.representations;
 import java.net.URL;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
+@javax.xml.bind.annotation.XmlRootElement(name = "asset-type-attribute")
 @XmlRootElement(name = "asset-type-attribute")
 public class AssetEntityAttributeRepr {
   public AssetEntityAttributeRepr() {

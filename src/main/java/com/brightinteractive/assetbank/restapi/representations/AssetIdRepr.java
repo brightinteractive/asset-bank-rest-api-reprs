@@ -13,6 +13,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "assetId")
 @XmlRootElement(name = "assetId")
 public class AssetIdRepr {
 

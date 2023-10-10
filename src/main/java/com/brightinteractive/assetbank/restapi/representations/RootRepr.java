@@ -25,6 +25,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "root")
 @XmlRootElement(name = "root")
 public class RootRepr {
   private static String API_NAME = "AssetBank RESTful API";

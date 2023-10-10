@@ -20,7 +20,9 @@ import jakarta.xml.bind.annotation.XmlSeeAlso;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "category")
 @XmlRootElement(name = "category")
+@javax.xml.bind.annotation.XmlSeeAlso({ CategoryWithCountRepr.class })
 @XmlSeeAlso({ CategoryWithCountRepr.class })
 public class CategoryRepr {
   public URL url;
@@ -29,7 +31,9 @@ public class CategoryRepr {
   public String description;
   public URL parent;
 
+  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
+  @javax.xml.bind.annotation.XmlElement(name = "category")
   @XmlElement(name = "category")
   public Collection<CategoryRepr> children;
 

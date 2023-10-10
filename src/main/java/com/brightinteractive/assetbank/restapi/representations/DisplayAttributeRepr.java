@@ -7,6 +7,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "displayAttribute")
 @XmlRootElement(name = "displayAttribute")
 public class DisplayAttributeRepr {
   public String label = "";
