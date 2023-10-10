@@ -11,7 +11,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  * <p>
  * {
  * "api_name": "AssetBank RESTful API"
- * "api_version_1_1": {
+ * "api_version_1_3": {
  * "checkoutUrl": "http://..."
  * "lightboxesUrl": "http://..."
  * "assetsUrl": "http://..."
@@ -29,28 +29,6 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "root")
 public class RootRepr {
   private static String API_NAME = "AssetBank RESTful API";
-
-  public static class RootServices_v_1_1 {
-    public URL checkoutUrl;
-    public URL lightboxesUrl;
-    public URL assetsUrl;
-    public URL signingUrl;
-  }
-
-  public static class RootServices_v_1_2 {
-    public URL checkoutUrl;
-    public URL lightboxesUrl;
-    public URL assetsUrl;
-    public URL usersUrl;
-    public URL userSearchUrl;
-    public URL attributesUrl;
-    public URL categorySearchUrl;
-    public URL accessLevelSearchUrl;
-    public URL signingUrl;
-    public URL assetSearchUrl;
-    public URL publishingActionsUrl;
-    public URL displayAttributeGroupUrl;
-  }
 
   public static class RootServices_v_1_3 {
     public URL checkoutUrl;
@@ -76,8 +54,6 @@ public class RootRepr {
   }
 
   public String api_name;
-  public RootServices_v_1_1 api_version_1_1;
-  public RootServices_v_1_2 api_version_1_2;
   public RootServices_v_1_3 api_version_1_3;
   public static final String LATEST_API_VERSION = "api_version_1_3";
 
@@ -87,9 +63,7 @@ public class RootRepr {
 
   public RootRepr(URL checkoutUrl,
       URL lightboxesUrl,
-      URL lightboxes_v1_1_Url,
       URL assetsUrl,
-      URL assets_v1_2_Url,
       URL usersUrl,
       URL userSearchUrl,
       URL attributesUrl,
@@ -108,30 +82,6 @@ public class RootRepr {
       URL authenticatedUserUrl,
       URL embeddedDataMappingsUrl) {
     api_name = API_NAME;
-
-    //build the 1.1 version...
-    api_version_1_1 = new RootServices_v_1_1();
-    api_version_1_1.checkoutUrl = checkoutUrl;
-    api_version_1_1.lightboxesUrl = lightboxes_v1_1_Url;
-    api_version_1_1.assetsUrl = assets_v1_2_Url;
-    api_version_1_1.signingUrl = signingUrl;
-
-    //and now the 1.2...
-    api_version_1_2 = new RootServices_v_1_2();
-    api_version_1_2.checkoutUrl = checkoutUrl;
-    api_version_1_2.lightboxesUrl = lightboxesUrl;
-    api_version_1_2.assetsUrl = assets_v1_2_Url;
-    api_version_1_2.usersUrl = usersUrl;
-    api_version_1_2.userSearchUrl = userSearchUrl;
-    api_version_1_2.attributesUrl = attributesUrl;
-    api_version_1_2.categorySearchUrl = categorySearchUrl;
-    api_version_1_2.accessLevelSearchUrl = folderSearchUrl;
-    api_version_1_2.signingUrl = signingUrl;
-    api_version_1_2.assetSearchUrl = assetSearchUrl;
-    api_version_1_2.publishingActionsUrl = publishingActionsUrl;
-    api_version_1_2.displayAttributeGroupUrl = displayAttributeGroupUrl;
-
-    //and now the 1.3...
     api_version_1_3 = new RootServices_v_1_3();
     api_version_1_3.checkoutUrl = checkoutUrl;
     api_version_1_3.lightboxesUrl = lightboxesUrl;
