@@ -12,6 +12,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "publishingAction")
 @XmlRootElement(name = "publishingAction")
 public class PublishingActionRepr {
   public String name;

@@ -16,6 +16,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "category")
 @XmlRootElement(name = "category")
 public class CategoryWithCountRepr extends CategoryRepr {
   public int count;

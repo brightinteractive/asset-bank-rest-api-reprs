@@ -3,6 +3,7 @@ package com.brightinteractive.assetbank.restapi.representations;
 import java.net.URL;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
+@javax.xml.bind.annotation.XmlRootElement(name = "assetInLightbox")
 @XmlRootElement(name = "assetInLightbox")
 public class AssetInLightboxRepr {
   public URL assetInstanceUrl;

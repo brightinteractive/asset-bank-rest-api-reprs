@@ -8,6 +8,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "signedURL")
 @XmlRootElement(name = "signedURL")
 public class SignedURLRepr {
 

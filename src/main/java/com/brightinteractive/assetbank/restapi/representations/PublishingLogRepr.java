@@ -14,6 +14,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "publishingLog")
 @XmlRootElement(name = "publishingLog")
 public class PublishingLogRepr {
   @SuppressWarnings("unused")
@@ -25,7 +26,9 @@ public class PublishingLogRepr {
     nextStartSequence = a_nextStartSequence;
   }
 
+  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
+  @javax.xml.bind.annotation.XmlElement(name = "event")
   @XmlElement(name = "event")
   public List<PublishingEventRepr> events;
   public long nextStartSequence;

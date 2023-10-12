@@ -6,6 +6,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 /**
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "publishedLightbox")
 @XmlRootElement(name = "publishedLightbox")
 public class PublishedLightboxRepr {
   public URL publishedLightboxUrl;

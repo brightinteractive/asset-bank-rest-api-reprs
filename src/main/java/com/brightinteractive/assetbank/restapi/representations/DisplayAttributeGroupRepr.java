@@ -8,11 +8,14 @@ import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
 
+@javax.xml.bind.annotation.XmlRootElement(name = "displayAttributeGroup")
 @XmlRootElement(name = "displayAttributeGroup")
 public class DisplayAttributeGroupRepr {
   public URL url;
 
+  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
+  @javax.xml.bind.annotation.XmlElement(name = "attribute")
   @XmlElement(name = "attribute")
   public List<AttributeRepr> attributes;
   public String name = null;

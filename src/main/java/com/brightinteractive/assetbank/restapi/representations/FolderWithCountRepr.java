@@ -14,6 +14,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "accessLevel")
 @XmlRootElement(name = "accessLevel")
 public class FolderWithCountRepr extends FolderRepr {
   public int count;

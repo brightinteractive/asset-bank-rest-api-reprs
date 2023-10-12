@@ -14,6 +14,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "listAttributeValue")
 @XmlRootElement(name = "listAttributeValue")
 public class ListAttributeValueRepr {
   public URL url;

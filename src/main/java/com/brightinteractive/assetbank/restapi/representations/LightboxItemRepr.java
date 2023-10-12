@@ -15,6 +15,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "lightboxItem")
 @XmlRootElement(name = "lightboxItem")
 public class LightboxItemRepr {
   public long id;

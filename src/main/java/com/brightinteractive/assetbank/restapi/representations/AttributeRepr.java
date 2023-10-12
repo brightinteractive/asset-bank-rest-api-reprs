@@ -15,6 +15,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  *
  * @author Bright
  */
+@javax.xml.bind.annotation.XmlRootElement(name = "attribute")
 @XmlRootElement(name = "attribute")
 public class AttributeRepr {
   public long id;
