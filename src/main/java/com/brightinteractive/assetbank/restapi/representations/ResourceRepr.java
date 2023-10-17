@@ -28,11 +28,13 @@ public class ResourceRepr {
 
   @javax.xml.bind.annotation.XmlValue
   @XmlValue
+  @org.codehaus.jackson.annotate.JsonValue
   @JsonValue
   public String getResource() {
     return resource;
   }
 
+  @org.codehaus.jackson.annotate.JsonCreator
   @JsonCreator
   public void setResource(String resource) {
     this.resource = resource;
