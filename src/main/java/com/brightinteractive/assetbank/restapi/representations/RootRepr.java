@@ -12,7 +12,6 @@ import jakarta.xml.bind.annotation.XmlRootElement;
  * {
  * "api_name": "AssetBank RESTful API"
  * "api_version_1_3": {
- * "checkoutUrl": "http://..."
  * "lightboxesUrl": "http://..."
  * "assetsUrl": "http://..."
  * "signingUrl": "http://...."
@@ -31,7 +30,6 @@ public class RootRepr {
   private static String API_NAME = "AssetBank RESTful API";
 
   public static class RootServices_v_1_3 {
-    public URL checkoutUrl;
     public URL lightboxesUrl;
     public URL assetsUrl;
     public URL usersUrl;
@@ -61,7 +59,7 @@ public class RootRepr {
   public RootRepr() {
   }
 
-  public RootRepr(URL checkoutUrl,
+  public RootRepr(
       URL lightboxesUrl,
       URL assetsUrl,
       URL usersUrl,
@@ -83,7 +81,6 @@ public class RootRepr {
       URL embeddedDataMappingsUrl) {
     api_name = API_NAME;
     api_version_1_3 = new RootServices_v_1_3();
-    api_version_1_3.checkoutUrl = checkoutUrl;
     api_version_1_3.lightboxesUrl = lightboxesUrl;
     api_version_1_3.assetsUrl = assetsUrl;
     api_version_1_3.usersUrl = usersUrl;
