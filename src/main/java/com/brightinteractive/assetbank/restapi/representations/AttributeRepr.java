@@ -4,18 +4,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-/**
- * Serializable attribute model.
- * <p>
- * Eg
- * {
- * "label": "foobar",
- * <-- ETC -->
- * }
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "attribute")
 @XmlRootElement(name = "attribute")
 public class AttributeRepr {
   public long id;

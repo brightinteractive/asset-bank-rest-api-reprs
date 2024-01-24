@@ -8,21 +8,7 @@ import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 
-/**
- * Serializable category info models.
- * <p>
- * Eg
- * {
- * "name": "foobar",
- * "description": "desc"
- * <-- ETC -->
- * }
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "category")
 @XmlRootElement(name = "category")
-@javax.xml.bind.annotation.XmlSeeAlso({ CategoryWithCountRepr.class })
 @XmlSeeAlso({ CategoryWithCountRepr.class })
 public class CategoryRepr {
   public URL url;
@@ -31,9 +17,7 @@ public class CategoryRepr {
   public String description;
   public URL parent;
 
-  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
-  @javax.xml.bind.annotation.XmlElement(name = "category")
   @XmlElement(name = "category")
   public Collection<CategoryRepr> children;
 

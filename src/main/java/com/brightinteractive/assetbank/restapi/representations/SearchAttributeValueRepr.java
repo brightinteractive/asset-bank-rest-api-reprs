@@ -2,7 +2,6 @@ package com.brightinteractive.assetbank.restapi.representations;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@javax.xml.bind.annotation.XmlRootElement(name = "attribute")
 @XmlRootElement(name = "attribute")
 public class SearchAttributeValueRepr {
   public String name;

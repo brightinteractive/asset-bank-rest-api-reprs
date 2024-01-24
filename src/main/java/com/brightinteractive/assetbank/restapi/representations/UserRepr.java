@@ -7,19 +7,6 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-/**
- * Serializable user model.
- * <p>
- * Eg
- * {
- * "username": "foo",
- * "forname": "bar"
- * <-- ETC -->
- * }
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "user")
 @XmlRootElement(name = "user")
 public class UserRepr {
   public URL url;
@@ -29,9 +16,7 @@ public class UserRepr {
   public String forename = null;
   public String surname = null;
   public String emailAddress = null;
-  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
-  @javax.xml.bind.annotation.XmlElement(name = "groupId")
   @XmlElement(name = "groupId")
   public Collection<Long> groupIds = null;
   public boolean isAdmin = false;

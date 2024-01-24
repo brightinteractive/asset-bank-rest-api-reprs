@@ -11,7 +11,6 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@javax.xml.bind.annotation.XmlRootElement(name = "keyword")
 @XmlRootElement(name = "keyword")
 public class KeywordRepr {
   public URL url;
@@ -20,9 +19,7 @@ public class KeywordRepr {
   public String synonyms;
   public URL parent;
 
-  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
-  @javax.xml.bind.annotation.XmlElement(name = "keyword")
   @XmlElement(name = "keyword")
   public Collection<KeywordRepr> children;
 

@@ -2,17 +2,6 @@ package com.brightinteractive.assetbank.restapi.representations;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-/**
- * Serializable user id model.
- * <p>
- * Eg
- * {
- * "userId": 1
- * }
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "userId")
 @XmlRootElement(name = "userId")
 public class UserIdRepr {
 

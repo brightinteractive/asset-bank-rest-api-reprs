@@ -3,19 +3,6 @@ package com.brightinteractive.assetbank.restapi.representations;
 import java.net.URL;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-/**
- * Serializable Lightbox info model.
- * <p>
- * Eg
- * {
- * "name": "foobar",
- * "size": 3
- * <-- ETC -->
- * }
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "lightboxItem")
 @XmlRootElement(name = "lightboxItem")
 public class LightboxItemRepr {
   public long id;

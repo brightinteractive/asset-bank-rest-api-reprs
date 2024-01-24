@@ -3,28 +3,6 @@ package com.brightinteractive.assetbank.restapi.representations;
 import java.net.URL;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-/**
- * Jersey API Root URL - Points to service resources.
- * Includes API versioning to allow for future compatability.
- * <p>
- * Eg
- * <p>
- * {
- * "api_name": "AssetBank RESTful API"
- * "api_version_1_3": {
- * "lightboxesUrl": "http://..."
- * "assetsUrl": "http://..."
- * "signingUrl": "http://...."
- * }
- * }
- * <p>
- * Clients may read (GET) from this resource.
- * They should check that the api_name matches "AssetBank RESTful API" as expected,
- * and then use the sub-resources denoted in "api_version_1_1" (or another version as appropriate)
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "root")
 @XmlRootElement(name = "root")
 public class RootRepr {
   private static String API_NAME = "AssetBank RESTful API";

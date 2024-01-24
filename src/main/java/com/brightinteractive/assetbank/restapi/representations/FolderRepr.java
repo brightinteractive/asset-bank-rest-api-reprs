@@ -8,21 +8,7 @@ import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 
-/**
- * Serializable folder info models.
- * <p>
- * Eg
- * {
- * "name": "foobar",
- * "description": "desc"
- * <-- ETC -->
- * }
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "accessLevel")
 @XmlRootElement(name = "accessLevel")
-@javax.xml.bind.annotation.XmlSeeAlso({ FolderWithCountRepr.class })
 @XmlSeeAlso({ FolderWithCountRepr.class })
 public class FolderRepr {
   public URL url;
@@ -37,9 +23,7 @@ public class FolderRepr {
   public boolean isBrowsable;
   public boolean showPromotedItems;
   public boolean showRecentItems;
-  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
-  @javax.xml.bind.annotation.XmlElement(name = "accessLevel")
   @XmlElement(name = "accessLevel")
   public Collection<FolderRepr> children;
 

@@ -10,12 +10,6 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-/**
- * Serializable asset model.
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "asset")
 @XmlRootElement(name = "asset")
 public class AssetRepr {
   public boolean submitted;
@@ -33,9 +27,7 @@ public class AssetRepr {
   public URL conversionUrl;
   public URL unwatermarkedLargeImageUrl;
 
-  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
-  @javax.xml.bind.annotation.XmlElement(name = "attribute")
   @XmlElement(name = "attribute")
   public List<AttributeValueRepr> attributes;
 
