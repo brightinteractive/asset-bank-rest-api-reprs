@@ -8,7 +8,6 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@javax.xml.bind.annotation.XmlRootElement(name = "assetSummary")
 @XmlRootElement(name = "assetSummary")
 public class LightweightAssetRepr {
   public long id = 0;
@@ -23,15 +22,11 @@ public class LightweightAssetRepr {
   public String typeName;
   public String accessLevelIds;
 
-  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
-  @javax.xml.bind.annotation.XmlElement(name = "displayAttribute")
   @XmlElement(name = "displayAttribute")
   public List<DisplayAttributeRepr> displayAttributes = new ArrayList<>();
 
-  @javax.xml.bind.annotation.XmlElementWrapper
   @XmlElementWrapper
-  @javax.xml.bind.annotation.XmlElement(name = "attribute")
   @XmlElement(name = "attribute")
   public List<SearchAttributeValueRepr> attributes;
 

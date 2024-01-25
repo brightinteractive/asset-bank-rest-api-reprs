@@ -1,24 +1,7 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
-/*
- * Copyright 2012 Bright, All Rights Reserved.
- */
-
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-/**
- * <p></p>Serializable publishing action ID model.</p>
- *
- * <p>E.g.</p>
- * <pre>
- * {
- *     "publishingActionId": 123
- * }
- * </pre>
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "publishingActionId")
 @XmlRootElement(name = "publishingActionId")
 public class PublishingActionIdRepr {
   public long publishingActionId;

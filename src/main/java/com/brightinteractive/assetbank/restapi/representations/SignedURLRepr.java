@@ -3,12 +3,6 @@ package com.brightinteractive.assetbank.restapi.representations;
 import java.net.URL;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-/**
- * Serializable signed url model.
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "signedURL")
 @XmlRootElement(name = "signedURL")
 public class SignedURLRepr {
 

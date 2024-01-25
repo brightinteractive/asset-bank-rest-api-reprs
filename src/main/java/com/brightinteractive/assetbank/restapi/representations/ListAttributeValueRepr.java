@@ -3,18 +3,6 @@ package com.brightinteractive.assetbank.restapi.representations;
 import java.net.URL;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-/**
- * Serializable attribute list value model.
- * <p>
- * Eg
- * {
- * "value": "foobar"
- * <-- ETC -->
- * }
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "listAttributeValue")
 @XmlRootElement(name = "listAttributeValue")
 public class ListAttributeValueRepr {
   public URL url;

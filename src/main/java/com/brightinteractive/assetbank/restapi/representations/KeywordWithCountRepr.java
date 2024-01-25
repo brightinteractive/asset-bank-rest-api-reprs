@@ -8,8 +8,6 @@ import java.net.URL;
 import java.util.Collection;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-
-@javax.xml.bind.annotation.XmlRootElement(name = "keyword")
 @XmlRootElement(name = "keyword")
 public class KeywordWithCountRepr extends KeywordRepr {
   public int count;

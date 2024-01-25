@@ -6,7 +6,6 @@ import java.util.Collection;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@javax.xml.bind.annotation.XmlRootElement(name = "asset")
 @XmlRootElement(name = "asset")
 public class LightboxAssetRepr extends AssetRepr {
 

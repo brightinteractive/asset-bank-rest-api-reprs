@@ -2,19 +2,6 @@ package com.brightinteractive.assetbank.restapi.representations;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-/**
- * Serializable attribute value info model.
- * <p>
- * Eg
- * {
- * "name": "foo",
- * "value": "bar"
- * <-- ETC -->
- * }
- *
- * @author Bright
- */
-@javax.xml.bind.annotation.XmlRootElement(name = "attributeValue")
 @XmlRootElement(name = "attributeValue")
 public class AttributeValueRepr {
   public Long id;
