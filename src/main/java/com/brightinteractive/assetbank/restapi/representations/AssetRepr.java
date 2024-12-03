@@ -28,7 +28,7 @@ public class AssetRepr {
   public URL unwatermarkedLargeImageUrl;
 
   @XmlElementWrapper
-  @XmlElement(name = "attribute")
+  @XmlElement(name = "attributes")
   public List<AttributeValueRepr> attributes;
 
   @SuppressWarnings("unused") // needed to keep JAXB happy

@@ -17,7 +17,7 @@ public class UserRepr {
   public String surname = null;
   public String emailAddress = null;
   @XmlElementWrapper
-  @XmlElement(name = "groupId")
+  @XmlElement(name = "groupIds")
   public Collection<Long> groupIds = null;
   public boolean isAdmin = false;
   public boolean isOrgUnitAdmin = false;

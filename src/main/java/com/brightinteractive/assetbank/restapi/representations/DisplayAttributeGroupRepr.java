@@ -12,7 +12,7 @@ public class DisplayAttributeGroupRepr {
   public URL url;
 
   @XmlElementWrapper
-  @XmlElement(name = "attribute")
+  @XmlElement(name = "attributes")
   public List<AttributeRepr> attributes;
   public String name = null;
   public long id;
