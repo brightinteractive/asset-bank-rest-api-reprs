@@ -18,7 +18,7 @@ public class CreateAssetRequestRepr {
   public URL assetTypeUrl;
 
   @XmlElementWrapper
-  @XmlElement(name = "accessLevel")
+  @XmlElement(name = "accessLevels")
   public List<FolderRepr> accessLevels;
 
   public CreateAssetRequestRepr(List<FolderRepr> accessLevels) {

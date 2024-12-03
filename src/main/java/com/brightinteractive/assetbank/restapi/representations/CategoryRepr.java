@@ -18,7 +18,7 @@ public class CategoryRepr {
   public URL parent;
 
   @XmlElementWrapper
-  @XmlElement(name = "category")
+  @XmlElement(name = "children")
   public Collection<CategoryRepr> children;
 
   public CategoryRepr() {

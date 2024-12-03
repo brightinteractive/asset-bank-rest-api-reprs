@@ -16,7 +16,7 @@ public class AssetEntityRepr extends LightweightAssetEntityRepr {
   public String excludedFileFormats;
 
   @XmlElementWrapper
-  @XmlElement(name = "allowableAttribute")
+  @XmlElement(name = "allowableAttributes")
   public List<AssetEntityAttributeRepr> allowableAttributes;
   public boolean showAttributeLabels;
   public URL matchOnAttributeUrl;

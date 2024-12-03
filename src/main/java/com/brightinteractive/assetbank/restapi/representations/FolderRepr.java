@@ -24,7 +24,7 @@ public class FolderRepr {
   public boolean showPromotedItems;
   public boolean showRecentItems;
   @XmlElementWrapper
-  @XmlElement(name = "accessLevel")
+  @XmlElement(name = "children")
   public Collection<FolderRepr> children;
 
   public FolderRepr() {

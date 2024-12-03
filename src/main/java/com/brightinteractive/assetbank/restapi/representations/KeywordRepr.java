@@ -20,7 +20,7 @@ public class KeywordRepr {
   public URL parent;
 
   @XmlElementWrapper
-  @XmlElement(name = "keyword")
+  @XmlElement(name = "children")
   public Collection<KeywordRepr> children;
 
   public KeywordRepr() {

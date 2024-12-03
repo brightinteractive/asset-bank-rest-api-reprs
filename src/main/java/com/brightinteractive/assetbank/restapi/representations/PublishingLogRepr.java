@@ -17,7 +17,7 @@ public class PublishingLogRepr {
   }
 
   @XmlElementWrapper
-  @XmlElement(name = "event")
+  @XmlElement(name = "events")
   public List<PublishingEventRepr> events;
   public long nextStartSequence;
 }

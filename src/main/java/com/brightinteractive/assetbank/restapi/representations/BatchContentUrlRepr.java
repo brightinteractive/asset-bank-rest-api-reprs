@@ -8,7 +8,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "assetContentUrls")
 public class BatchContentUrlRepr {
   @XmlElementWrapper
-  @XmlElement(name = "contentUrl")
+  @XmlElement(name = "contentUrls")
   public List<AssetContentUrlRepr> contentUrls;
 
   public BatchContentUrlRepr() {

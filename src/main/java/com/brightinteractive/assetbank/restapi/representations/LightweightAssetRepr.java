@@ -23,11 +23,11 @@ public class LightweightAssetRepr {
   public String accessLevelIds;
 
   @XmlElementWrapper
-  @XmlElement(name = "displayAttribute")
+  @XmlElement(name = "displayAttributes")
   public List<DisplayAttributeRepr> displayAttributes = new ArrayList<>();
 
   @XmlElementWrapper
-  @XmlElement(name = "attribute")
+  @XmlElement(name = "attributes")
   public List<SearchAttributeValueRepr> attributes;
 
   public LightweightAssetRepr() {
