@@ -4,6 +4,7 @@ package com.brightinteractive.assetbank.restapi.representations;
  * Copyright 2018 Bright, All Rights Reserved.
  */
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.URL;
 import java.util.Collection;
 import java.util.Collections;
@@ -21,6 +22,7 @@ public class KeywordRepr {
 
   @XmlElementWrapper
   @XmlElement(name = "keyword")
+  @JsonProperty("children")
   public Collection<KeywordRepr> children;
 
   public KeywordRepr() {

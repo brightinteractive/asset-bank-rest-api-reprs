@@ -1,5 +1,6 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collection;
@@ -18,6 +19,7 @@ public class UserRepr {
   public String emailAddress = null;
   @XmlElementWrapper
   @XmlElement(name = "groupId")
+  @JsonProperty("groupIds")
   public Collection<Long> groupIds = null;
   public boolean isAdmin = false;
   public boolean isOrgUnitAdmin = false;

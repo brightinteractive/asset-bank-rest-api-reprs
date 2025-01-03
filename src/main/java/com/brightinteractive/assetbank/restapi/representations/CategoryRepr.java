@@ -1,5 +1,6 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.URL;
 import java.util.Collection;
 import java.util.Collections;
@@ -19,6 +20,7 @@ public class CategoryRepr {
 
   @XmlElementWrapper
   @XmlElement(name = "category")
+  @JsonProperty("children")
   public Collection<CategoryRepr> children;
 
   public CategoryRepr() {

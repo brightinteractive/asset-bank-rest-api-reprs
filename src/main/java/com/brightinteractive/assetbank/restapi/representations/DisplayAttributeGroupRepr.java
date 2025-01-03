@@ -1,5 +1,6 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
@@ -13,6 +14,7 @@ public class DisplayAttributeGroupRepr {
 
   @XmlElementWrapper
   @XmlElement(name = "attribute")
+  @JsonProperty("attributes")
   public List<AttributeRepr> attributes;
   public String name = null;
   public long id;

@@ -4,6 +4,7 @@ package com.brightinteractive.assetbank.restapi.representations;
  * Copyright 2013 Bright, All Rights Reserved.
  */
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.URL;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -19,6 +20,7 @@ public class CreateAssetRequestRepr {
 
   @XmlElementWrapper
   @XmlElement(name = "accessLevel")
+  @JsonProperty("accessLevels")
   public List<FolderRepr> accessLevels;
 
   public CreateAssetRequestRepr(List<FolderRepr> accessLevels) {

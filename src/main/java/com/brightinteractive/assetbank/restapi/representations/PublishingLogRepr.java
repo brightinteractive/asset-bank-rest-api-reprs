@@ -1,5 +1,6 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
@@ -18,6 +19,7 @@ public class PublishingLogRepr {
 
   @XmlElementWrapper
   @XmlElement(name = "event")
+  @JsonProperty("events")
   public List<PublishingEventRepr> events;
   public long nextStartSequence;
 }
