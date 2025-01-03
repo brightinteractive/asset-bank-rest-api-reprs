@@ -1,5 +1,6 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.URL;
 import java.util.Collection;
 import java.util.Collections;
@@ -24,7 +25,8 @@ public class FolderRepr {
   public boolean showPromotedItems;
   public boolean showRecentItems;
   @XmlElementWrapper
-  @XmlElement(name = "children")
+  @XmlElement(name = "accessLevel")
+  @JsonProperty("children")
   public Collection<FolderRepr> children;
 
   public FolderRepr() {

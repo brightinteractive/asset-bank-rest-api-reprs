@@ -1,5 +1,6 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -28,7 +29,8 @@ public class AssetRepr {
   public URL unwatermarkedLargeImageUrl;
 
   @XmlElementWrapper
-  @XmlElement(name = "attributes")
+  @XmlElement(name = "attribute")
+  @JsonProperty("attributes")
   public List<AttributeValueRepr> attributes;
 
   @SuppressWarnings("unused") // needed to keep JAXB happy

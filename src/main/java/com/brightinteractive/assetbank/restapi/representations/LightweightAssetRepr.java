@@ -1,5 +1,6 @@
 package com.brightinteractive.assetbank.restapi.representations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,11 +24,13 @@ public class LightweightAssetRepr {
   public String accessLevelIds;
 
   @XmlElementWrapper
-  @XmlElement(name = "displayAttributes")
+  @XmlElement(name = "displayAttribute")
+  @JsonProperty("displayAttributes")
   public List<DisplayAttributeRepr> displayAttributes = new ArrayList<>();
 
   @XmlElementWrapper
-  @XmlElement(name = "attributes")
+  @XmlElement(name = "attribute")
+  @JsonProperty("attributes")
   public List<SearchAttributeValueRepr> attributes;
 
   public LightweightAssetRepr() {

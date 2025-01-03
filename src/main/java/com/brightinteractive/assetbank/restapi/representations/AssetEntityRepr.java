@@ -1,6 +1,7 @@
 /*Copyright 2015 Bright, All Rights Reserved.*/
 package com.brightinteractive.assetbank.restapi.representations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
@@ -16,7 +17,8 @@ public class AssetEntityRepr extends LightweightAssetEntityRepr {
   public String excludedFileFormats;
 
   @XmlElementWrapper
-  @XmlElement(name = "allowableAttributes")
+  @XmlElement(name = "allowableAttribute")
+  @JsonProperty("allowableAttributes")
   public List<AssetEntityAttributeRepr> allowableAttributes;
   public boolean showAttributeLabels;
   public URL matchOnAttributeUrl;
@@ -24,6 +26,7 @@ public class AssetEntityRepr extends LightweightAssetEntityRepr {
   public boolean allowChildren;
   @XmlElementWrapper
   @XmlElement(name = "childRelationships")
+  @JsonProperty("childRelationships")
   public List<AssetEntityRelationshipRepr> childRelationships;
   public String childRelationshipToName;
   public String childRelationshipToNamePlural;
@@ -31,6 +34,7 @@ public class AssetEntityRepr extends LightweightAssetEntityRepr {
   public boolean allowPeers;
   @XmlElementWrapper
   @XmlElement(name = "peerRelationships")
+  @JsonProperty("peerRelationships")
   public List<AssetEntityRelationshipRepr> peerRelationships;
   public String peerRelationshipToName;
   public String peerRelationshipToNamePlural;
