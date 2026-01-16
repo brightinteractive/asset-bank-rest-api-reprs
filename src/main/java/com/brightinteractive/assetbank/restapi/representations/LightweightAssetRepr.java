@@ -22,6 +22,7 @@ public class LightweightAssetRepr {
   public long typeId;
   public String typeName;
   public String accessLevelIds;
+  public String onDemandTransformationIdentifier;
 
   @XmlElementWrapper
   @XmlElement(name = "displayAttribute")
@@ -40,12 +41,14 @@ public class LightweightAssetRepr {
                               URL fullAssetUrl,
                               String originalFilename,
                               boolean approved,
-                              List<SearchAttributeValueRepr> attributes) {
+                              List<SearchAttributeValueRepr> attributes,
+                              String onDemandTransformationIdentifier) {
     this.id = id;
     this.fullAssetUrl = fullAssetUrl;
     this.originalFilename = originalFilename;
     this.approved = approved;
     this.attributes = Collections.unmodifiableList(attributes);
+    this.onDemandTransformationIdentifier = onDemandTransformationIdentifier;
   }
 
   public int getNumberOfDisplayAttributesWithLabel(String label) {
